@@ -11,7 +11,7 @@ import UIKit
 class StockQuoteController {
     static func stockQuoteSearchBySymbol(symbol: String, completion:(result: StockQuote?) -> Void) {
         let url = QuoteNetworkController.searchURLBySymbol(symbol)
-        QuoteNetworkController.dataAtURL(url) { (resultData) -> Void in
+        QuoteNetworkController.quoteDataAtURL(url) { (resultData) -> Void in
             guard let resultData = resultData else {
                 print("Error Loading Data")
                 completion(result: nil)

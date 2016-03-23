@@ -17,6 +17,8 @@
 		547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD81CA1D745009DBB2D /* StockLookupController.swift */; };
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
 		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
+		547FABFF1CA3210E009DBB2D /* LookupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */; };
+		547FAC011CA32310009DBB2D /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		547FABD81CA1D745009DBB2D /* StockLookupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookupController.swift; sourceTree = "<group>"; };
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
 		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
+		547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTableViewController.swift; sourceTree = "<group>"; };
+		547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				54220EB51CA0F1AF00989734 /* Main.storyboard */,
 				547FABDD1CA1D76D009DBB2D /* Models */,
 				547FABDC1CA1D763009DBB2D /* Controllers */,
+				547FAC021CA32318009DBB2D /* Views */,
 				54220EB81CA0F1AF00989734 /* Assets.xcassets */,
 				54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */,
 				54220EBD1CA0F1AF00989734 /* Info.plist */,
@@ -93,6 +98,15 @@
 				547FABD41CA1D710009DBB2D /* StockQuote.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		547FAC021CA32318009DBB2D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */,
+				547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +183,11 @@
 				547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */,
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
 				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
+				547FABFF1CA3210E009DBB2D /* LookupTableViewController.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,
+				547FAC011CA32310009DBB2D /* QuoteTableViewController.swift in Sources */,
 				547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

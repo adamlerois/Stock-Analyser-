@@ -14,7 +14,7 @@ class LookupNetworkController {
         return NSURL(string: lookupBaseURL + "\(name)")!
     }
 
-    static func dataAtURL(url: NSURL, completion:(resultData: NSData?) -> Void) {
+    static func lookupDataAtURL(url: NSURL, completion:(resultData: NSData?) -> Void) {
         let session = NSURLSession.sharedSession()
     
         // create data task and returns the data at the url path

@@ -11,7 +11,7 @@ import UIKit
 class StockLookupController {
     static func stockLookupSearchByName(name: String, completion:(result: StockLookup?) -> Void) {
         let url = LookupNetworkController.searchURLByName(name)
-        LookupNetworkController.dataAtURL(url) { (resultData) -> Void in
+        LookupNetworkController.lookupDataAtURL(url) { (resultData) -> Void in
             guard let resultData = resultData
             else {
                 print("Error Loading Data")

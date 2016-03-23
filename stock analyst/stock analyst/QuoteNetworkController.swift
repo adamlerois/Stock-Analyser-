@@ -14,7 +14,7 @@ class QuoteNetworkController {
         return NSURL(string: quoteBaseURL + "\(symbol)")!
     
     }
-    static func dataAtURL(url: NSURL, completion:(resultData: NSData?) -> Void) {
+    static func quoteDataAtURL(url: NSURL, completion:(resultData: NSData?) -> Void) {
         let session = NSURLSession.sharedSession()
         let dataTask = session.dataTaskWithURL(url) { (data, _, error) -> Void in
             guard let data = data else {

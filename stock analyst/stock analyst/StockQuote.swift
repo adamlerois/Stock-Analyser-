@@ -42,23 +42,23 @@ class StockQuote {
     var low: Double
     var open: Double
     
-    init(status: String, name: String, symbol: String, lastPrice: Double, change: Double, changePercent: Double, timeStamp: String, msDate: Double, marketCap: Double, volume: Double, changeYTD: Double, changePercentYTD: Double, high: Double, low: Double, open: Double) {
-        self.status = status
-        self.name = name
-        self.symbol = symbol
-        self.lastPrice = lastPrice
-        self.change = change
-        self.timeStamp = timeStamp
-        self.msDate = msDate
-        self.marketCap = marketCap
-        self.volume = volume
-        self.changeYTD = changeYTD
-        self.changePercentYTD = changePercentYTD
-        self.high = high
-        self.low = low
-        self.open = open
-        self.changePercent = changePercent
-    }
+//    init(status: String, name: String, symbol: String, lastPrice: Double, change: Double, changePercent: Double, timeStamp: String, msDate: Double, marketCap: Double, volume: Double, changeYTD: Double, changePercentYTD: Double, high: Double, low: Double, open: Double) {
+//        self.status = status
+//        self.name = name
+//        self.symbol = symbol
+//        self.lastPrice = lastPrice
+//        self.change = change
+//        self.timeStamp = timeStamp
+//        self.msDate = msDate
+//        self.marketCap = marketCap
+//        self.volume = volume
+//        self.changeYTD = changeYTD
+//        self.changePercentYTD = changePercentYTD
+//        self.high = high
+//        self.low = low
+//        self.open = open
+//        self.changePercent = changePercent
+//    }
     init?(jsonDictionary: [String: AnyObject]) {
         
         self.name = jsonDictionary[StockQuote.Kname] as? String ?? ""
