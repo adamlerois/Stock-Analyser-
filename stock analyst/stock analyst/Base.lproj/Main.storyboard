@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AjP-Xe-4nr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AjP-Xe-4nr">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -24,17 +24,27 @@
                                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 </searchBar>
                                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-lW-aMk">
-                                    <rect key="frame" x="101" y="160" width="355" height="216"/>
-                                </pickerView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Popular Companies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YE-Zd-oIF">
-                                    <rect key="frame" x="121" y="108" width="375" height="33"/>
+                                    <rect key="frame" x="123" y="169" width="355" height="216"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="33" id="DDg-7y-uce"/>
+                                        <constraint firstAttribute="width" constant="355" id="bi8-eD-N03"/>
+                                    </constraints>
+                                </pickerView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YE-Zd-oIF">
+                                    <rect key="frame" x="80" y="108" width="441" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="33" id="eZv-Rx-OjD"/>
                                         <constraint firstAttribute="width" constant="315" id="qp5-mA-dtS"/>
                                         <constraint firstAttribute="height" constant="33" id="uce-Q5-YU4"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="OR Pick A Popular Company">
+                                            <attributes>
+                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -46,18 +56,16 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="top" secondItem="aIz-ft-hvM" secondAttribute="bottom" constant="56" id="EKb-g8-JbJ"/>
+                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="28" id="1Kk-wr-Euo"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="centerX" secondItem="aIz-ft-hvM" secondAttribute="centerX" id="9C6-LL-Ni6"/>
                                 <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="10" id="EpI-NT-XCm"/>
-                                <constraint firstAttribute="trailing" secondItem="Dd3-lW-aMk" secondAttribute="trailing" constant="144" id="Ezb-bD-sSK"/>
-                                <constraint firstAttribute="trailing" secondItem="8YE-Zd-oIF" secondAttribute="trailing" constant="164" id="G40-gR-6YD"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leadingMargin" id="GaE-aM-CWM"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leading" constant="80" id="HC3-SC-G75"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="top" secondItem="5Td-mY-NkR" secondAttribute="topMargin" id="IFK-cX-s2l"/>
-                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="19" id="K0f-qq-dEb"/>
                                 <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="Dd3-lW-aMk" secondAttribute="leading" id="M39-H7-KaF"/>
-                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leading" constant="101" id="bVq-fg-PYJ"/>
-                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leading" constant="121" id="rPW-JI-KJI"/>
-                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="centerY" secondItem="5Td-mY-NkR" secondAttribute="centerY" id="t6R-Nc-VCk"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="top" secondItem="aIz-ft-hvM" secondAttribute="bottom" constant="56" id="kW9-Ah-L3w"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="trailing" secondItem="5Td-mY-NkR" secondAttribute="trailingMargin" id="tCH-TU-sOZ"/>
+                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="centerX" secondItem="aIz-ft-hvM" secondAttribute="centerX" id="xva-vv-alX"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
