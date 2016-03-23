@@ -13,9 +13,10 @@
 		54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */; };
 		547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD21CA1D6F9009DBB2D /* StockLookup.swift */; };
 		547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD41CA1D710009DBB2D /* StockQuote.swift */; };
-		547FABD71CA1D72A009DBB2D /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* NetworkController.swift */; };
+		547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */; };
 		547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD81CA1D745009DBB2D /* StockLookupController.swift */; };
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
+		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +28,10 @@
 		54220EBD1CA0F1AF00989734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		547FABD21CA1D6F9009DBB2D /* StockLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookup.swift; sourceTree = "<group>"; };
 		547FABD41CA1D710009DBB2D /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
-		547FABD61CA1D72A009DBB2D /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupNetworkController.swift; sourceTree = "<group>"; };
 		547FABD81CA1D745009DBB2D /* StockLookupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookupController.swift; sourceTree = "<group>"; };
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
+		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 		547FABDC1CA1D763009DBB2D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				547FABD61CA1D72A009DBB2D /* NetworkController.swift */,
+				547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */,
+				547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */,
 				547FABD81CA1D745009DBB2D /* StockLookupController.swift */,
 				547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */,
 			);
@@ -163,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547FABD71CA1D72A009DBB2D /* NetworkController.swift in Sources */,
+				547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */,
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
+				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,

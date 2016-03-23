@@ -1,5 +1,5 @@
 //
-//  NetworkController.swift
+//  QuoteNetworkController.swift
 //  stock analyst
 //
 //  Created by youcef bouhafna on 3/22/16.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class QuoteNetworkController {
+    static let quoteBaseURL = ""
+}
