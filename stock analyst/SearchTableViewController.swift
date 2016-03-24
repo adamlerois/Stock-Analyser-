@@ -13,6 +13,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     enum SegmentedControlViewMode: Int {
         case Lookup = 0
         case Quote = 1
+        
     }
     var viewMode: SegmentedControlViewMode {
         return SegmentedControlViewMode(rawValue: segmentedControl.selectedSegmentIndex)!
@@ -38,7 +39,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
 
     // functions
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
-        
+        updateViewMode()
     }
     
     @IBAction func goButtonTapped() {
@@ -62,13 +63,16 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     func updateViewMode() {
         if segmentedControl.selectedSegmentIndex == 0 {
+            searchBar.placeholder = "Type Company Name... example: Apple"
+            pickupLabel.text = "OR Pick Up A Company "
+            pickerView.reloadAllComponents()
+        } else {
             searchBar.placeholder = "Type Symbol Name... example: AAPL"
             pickupLabel.text = "OR Pick Up A Ticker Symbol"
+            pickerView.reloadAllComponents()
         }
     }
-    func updatePickerViewArray() {
-        
-    }
+    
 
     
     
@@ -90,14 +94,22 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     //MARK: - UIPickerView Protocol Methods
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        1
+        return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return companies.count
+        } else {
+            return symbols.count
+        }
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        <#code#>
+        if segmentedControl.selectedSegmentIndex == 0 {
+            return self.companies[row]
+        } else  {
+            return self.symbols[row]
+        }
     }
 
     /*
