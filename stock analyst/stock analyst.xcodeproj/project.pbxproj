@@ -13,14 +13,14 @@
 		54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */; };
 		544E95071CA33C5500DD7D0A /* LookupResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95061CA33C5500DD7D0A /* LookupResultTableViewController.swift */; };
 		544E95091CA33C6600DD7D0A /* QuoteResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95081CA33C6600DD7D0A /* QuoteResultTableViewController.swift */; };
+		544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */; };
+		544E95271CA4808D00DD7D0A /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95261CA4808D00DD7D0A /* ResultTableViewController.swift */; };
 		547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD21CA1D6F9009DBB2D /* StockLookup.swift */; };
 		547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD41CA1D710009DBB2D /* StockQuote.swift */; };
 		547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */; };
 		547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD81CA1D745009DBB2D /* StockLookupController.swift */; };
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
 		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
-		547FABFF1CA3210E009DBB2D /* LookupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */; };
-		547FAC011CA32310009DBB2D /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,14 +32,14 @@
 		54220EBD1CA0F1AF00989734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		544E95061CA33C5500DD7D0A /* LookupResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupResultTableViewController.swift; sourceTree = "<group>"; };
 		544E95081CA33C6600DD7D0A /* QuoteResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteResultTableViewController.swift; sourceTree = "<group>"; };
+		544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ../SearchTableViewController.swift; sourceTree = "<group>"; };
+		544E95261CA4808D00DD7D0A /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewController.swift; path = ../ResultTableViewController.swift; sourceTree = "<group>"; };
 		547FABD21CA1D6F9009DBB2D /* StockLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookup.swift; sourceTree = "<group>"; };
 		547FABD41CA1D710009DBB2D /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupNetworkController.swift; sourceTree = "<group>"; };
 		547FABD81CA1D745009DBB2D /* StockLookupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookupController.swift; sourceTree = "<group>"; };
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
 		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
-		547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupTableViewController.swift; sourceTree = "<group>"; };
-		547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +107,10 @@
 		547FAC021CA32318009DBB2D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				544E95261CA4808D00DD7D0A /* ResultTableViewController.swift */,
+				544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */,
 				544E95061CA33C5500DD7D0A /* LookupResultTableViewController.swift */,
 				544E95081CA33C6600DD7D0A /* QuoteResultTableViewController.swift */,
-				547FABFE1CA3210E009DBB2D /* LookupTableViewController.swift */,
-				547FAC001CA32310009DBB2D /* QuoteTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -189,13 +189,13 @@
 				547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */,
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
 				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
-				547FABFF1CA3210E009DBB2D /* LookupTableViewController.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
 				544E95091CA33C6600DD7D0A /* QuoteResultTableViewController.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,
-				547FAC011CA32310009DBB2D /* QuoteTableViewController.swift in Sources */,
+				544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */,
 				544E95071CA33C5500DD7D0A /* LookupResultTableViewController.swift in Sources */,
+				544E95271CA4808D00DD7D0A /* ResultTableViewController.swift in Sources */,
 				547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

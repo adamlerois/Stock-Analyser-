@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AjP-Xe-4nr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Search Table View Controller-->
         <scene sceneID="1iU-Sx-p2p">
             <objects>
-                <tableViewController id="vMG-Ke-fIH" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="lookupID" id="vMG-Ke-fIH" customClass="SearchTableViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zWv-hw-GPf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,20 +19,14 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <searchBar contentMode="redraw" barStyle="black" placeholder="Type Company Name... example: Apple" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-ft-hvM">
+                                <searchBar contentMode="redraw" barStyle="black" text="" placeholder="Type Company Name... example: Apple" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-ft-hvM">
                                     <rect key="frame" x="8" y="8" width="584" height="44"/>
                                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 </searchBar>
-                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-lW-aMk">
-                                    <rect key="frame" x="123" y="169" width="355" height="216"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="355" id="bi8-eD-N03"/>
-                                    </constraints>
-                                </pickerView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YE-Zd-oIF">
-                                    <rect key="frame" x="80" y="108" width="441" height="33"/>
+                                    <rect key="frame" x="80" y="140" width="441" height="33"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="33" id="eZv-Rx-OjD"/>
+                                        <constraint firstAttribute="height" constant="33" id="pg0-Ka-ApG"/>
                                         <constraint firstAttribute="width" constant="315" id="qp5-mA-dtS"/>
                                         <constraint firstAttribute="height" constant="33" id="uce-Q5-YU4"/>
                                     </constraints>
@@ -53,17 +47,58 @@
                                         </mask>
                                     </variation>
                                 </label>
+                                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-lW-aMk">
+                                    <rect key="frame" x="123" y="202" width="355" height="216"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="355" id="bi8-eD-N03"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="dataSource" destination="vMG-Ke-fIH" id="C5y-xO-i1P"/>
+                                        <outlet property="delegate" destination="vMG-Ke-fIH" id="dUW-Es-TDY"/>
+                                    </connections>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXs-PU-jpR">
+                                    <rect key="frame" x="240" y="70" width="121" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="121" id="gUG-AF-hPx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Find">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="findButtonTapped:" destination="vMG-Ke-fIH" eventType="touchUpInside" id="CVn-1K-UF9"/>
+                                        <segue destination="uRN-3y-KML" kind="show" identifier="toResultIdentifier" id="wrn-qe-IRi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqc-XZ-qnH">
+                                    <rect key="frame" x="270" y="451" width="60" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="7wr-cq-8cg"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                    <state key="normal" title="Go">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goButtonTapped" destination="vMG-Ke-fIH" eventType="touchUpInside" id="vyL-LI-ydG"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="28" id="1Kk-wr-Euo"/>
-                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="centerX" secondItem="aIz-ft-hvM" secondAttribute="centerX" id="9C6-LL-Ni6"/>
                                 <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="10" id="EpI-NT-XCm"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leadingMargin" id="GaE-aM-CWM"/>
-                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leading" constant="80" id="HC3-SC-G75"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="top" secondItem="5Td-mY-NkR" secondAttribute="topMargin" id="IFK-cX-s2l"/>
                                 <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="Dd3-lW-aMk" secondAttribute="leading" id="M39-H7-KaF"/>
-                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="top" secondItem="aIz-ft-hvM" secondAttribute="bottom" constant="56" id="kW9-Ah-L3w"/>
+                                <constraint firstItem="Zqc-XZ-qnH" firstAttribute="top" secondItem="Dd3-lW-aMk" secondAttribute="bottom" constant="33" id="PsQ-q3-ehr"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="leading" secondItem="5Td-mY-NkR" secondAttribute="leading" constant="80" id="Xvg-XX-0Vo"/>
+                                <constraint firstItem="Zqc-XZ-qnH" firstAttribute="centerX" secondItem="Dd3-lW-aMk" secondAttribute="centerX" id="ZV3-Ek-NIp"/>
+                                <constraint firstItem="Dd3-lW-aMk" firstAttribute="top" secondItem="8YE-Zd-oIF" secondAttribute="bottom" constant="29" id="dok-ox-tJ2"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="top" secondItem="QXs-PU-jpR" secondAttribute="bottom" constant="40" id="i1s-fc-u4D"/>
+                                <constraint firstItem="QXs-PU-jpR" firstAttribute="centerX" secondItem="aIz-ft-hvM" secondAttribute="centerX" id="jY8-hE-3a0"/>
+                                <constraint firstItem="8YE-Zd-oIF" firstAttribute="centerX" secondItem="QXs-PU-jpR" secondAttribute="centerX" id="o1l-3D-ttR"/>
+                                <constraint firstItem="QXs-PU-jpR" firstAttribute="top" secondItem="aIz-ft-hvM" secondAttribute="bottom" constant="18" id="rfZ-3o-Whq"/>
                                 <constraint firstItem="aIz-ft-hvM" firstAttribute="trailing" secondItem="5Td-mY-NkR" secondAttribute="trailingMargin" id="tCH-TU-sOZ"/>
                                 <constraint firstItem="Dd3-lW-aMk" firstAttribute="centerX" secondItem="aIz-ft-hvM" secondAttribute="centerX" id="xva-vv-alX"/>
                             </constraints>
@@ -81,19 +116,56 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="LA6-4G-Qfm">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="r8d-aj-3kW">
-                            <rect key="frame" x="123" y="7" width="354" height="30"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Ilp-zn-laE">
+                            <rect key="frame" x="180" y="7" width="241" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Quick Lookup"/>
-                                <segment title="Quote Details"/>
+                                <segment title="Company Lookup"/>
+                                <segment title="Stock Quotes"/>
                             </segments>
+                            <connections>
+                                <action selector="segmentedValueChanged:" destination="vMG-Ke-fIH" eventType="valueChanged" id="uXR-6j-Puy"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pickerView" destination="Dd3-lW-aMk" id="IS0-n7-rMO"/>
+                        <outlet property="pickupLabel" destination="8YE-Zd-oIF" id="xJf-Iq-Zxt"/>
+                        <outlet property="searchBar" destination="aIz-ft-hvM" id="nGf-1i-89j"/>
+                        <outlet property="segmentedControl" destination="Ilp-zn-laE" id="Mu3-ep-qLu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuv-kP-rjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1543" y="570"/>
+        </scene>
+        <!--Result Table View Controller-->
+        <scene sceneID="dN4-kX-3Dd">
+            <objects>
+                <tableViewController id="uRN-3y-KML" customClass="ResultTableViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wkq-xh-BGL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" id="AtG-vH-sLr">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AtG-vH-sLr" id="J7U-uf-Sf2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uRN-3y-KML" id="jha-B7-zEi"/>
+                            <outlet property="delegate" destination="uRN-3y-KML" id="UMV-w8-EaB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KV5-EU-sha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="570"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oTA-Ub-1mb">

@@ -1,14 +1,16 @@
 //
-//  QuoteTableViewController.swift
+//  ResultTableViewController.swift
 //  stock analyst
 //
-//  Created by youcef bouhafna on 3/23/16.
+//  Created by youcef bouhafna on 3/24/16.
 //  Copyright © 2016 Youcef. All rights reserved.
 //
 
 import UIKit
 
-class QuoteTableViewController: UITableViewController {
+class ResultTableViewController: UITableViewController {
+    var lookupresult: StockLookup?
+    var quoteResult: StockQuote?
 
     override func viewDidLoad() {
         super.viewDidLoad()
