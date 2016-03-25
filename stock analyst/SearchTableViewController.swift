@@ -27,6 +27,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     var lookup: StockLookup?
     var stockQuote: StockQuote?
     
+    
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var pickupLabel: UILabel!
@@ -43,22 +44,61 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     }
     
     @IBAction func goButtonTapped() {
+        if segmentedControl.selectedSegmentIndex == 1 {
         let index = self.pickerView.selectedRowInComponent(0)
-        let companiesString = self.symbols[index]
-        StockQuoteController.stockQuoteSearchBySymbol(companiesString) { (stocks) in
+        let symblesString = self.symbols[index]
+        StockQuoteController.stockQuoteSearchBySymbol(symblesString) { (stocks) in
             self.stockQuote = stocks
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.performSegueWithIdentifier("toResultIdentifier", sender: self)
             })
         }
+        }else {
+            let index = self.pickerView.selectedRowInComponent(0)
+            let companiesString = self.companies[index]
+            StockLookupController.stockLookupSearchByName(companiesString) { (names) in
+                self.lookup = names
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.performSegueWithIdentifier("toResultIdentifier", sender: self)
+                })
+            }
+        }
     }
 
-
+// search button tapped 
+    
     @IBAction func findButtonTapped(sender: UIButton) {
         // more things to add
-        performSegueWithIdentifier("toResultIdentifier", sender: self)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            searchBar.resignFirstResponder()
+             let searchText = searchBar.text ?? ""
+                StockLookupController.stockLookupSearchByName(searchText, completion: { (result) in
+                    self.lookup = result
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("toResultIdentifier", sender: self)
+                        self.tableView.reloadData()
+                    })
+                })
+                    
+                
+        }else {
+            searchBar.resignFirstResponder()
+            let searchText = searchBar.text ?? ""
+            StockQuoteController.stockQuoteSearchBySymbol(searchText, completion: { (result) in
+                self.stockQuote = result
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.performSegueWithIdentifier("toResultIdentifier", sender: self)
+                    self.tableView.reloadData()
+                })
+            })
+
+        }
         
-    }
+                
+            }
+    
+
+
     
     
     func updateViewMode() {
