@@ -161,13 +161,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toResultIdentifier" {
-            let resultView = segue.destinationViewController as? ResultTableViewController
-            resultView!.lookupresult = self.lookup
-            resultView?.quoteResult = self.stockQuote
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "toResultIdentifier" {
+//            let resultView = segue.destinationViewController as? ResultTableViewController
+//            resultView!.lookupresult = self.lookup
+//            resultView?.quoteResult = self.stockQuote
+//        }
+//    }
     
 
 }
