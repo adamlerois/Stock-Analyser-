@@ -10,24 +10,30 @@ import Foundation
 import UIKit
 class StockLookupController {
     static func stockLookupSearchByName(name: String, completion:(result: StockLookup?) -> Void) {
-        let url = LookupNetworkController.searchURLByName(name)
-        LookupNetworkController.lookupDataAtURL(url) { (resultData) -> Void in
-            guard let resultData = resultData
-            else {
-                print("Error Loading Data")
-                completion(result: nil)
-                return
-            }
-            do {
-                let stockLookupAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-                var stockLookupObject: StockLookup?
-                if let lookupdictionary = stockLookupAnyObject as? [String: AnyObject] {
-                    stockLookupObject = StockLookup(jsonDictionary: lookupdictionary)
+        if   let url = LookupNetworkController.searchURLByName(name) {
+            LookupNetworkController.lookupDataAtURL(url) { (resultData) -> Void in
+                guard let resultData = resultData
+                    else {
+                        print("Error Loading Data")
+                        completion(result: nil)
+                        return
                 }
-                completion(result: stockLookupObject)
-            } catch {
-                completion(result: nil)
+                do {
+                    let stockLookupAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
+                    if let lookupArray = stockLookupAnyObject as? [[String: AnyObject]], lookupdictionary = lookupArray.first {
+                        let stockLookupObject = StockLookup(jsonDictionary: lookupdictionary)
+                        
+                        completion(result: stockLookupObject)
+                        
+                    }else {
+                        completion(result: nil)
+                    }
+                } catch {
+                    completion(result: nil)
+                }
             }
+        }else {
+         completion(result: nil)
         }
     }
 }
