@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIBarPositioningDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     enum SegmentedControlViewMode: Int {
         case Lookup = 0
@@ -25,6 +25,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     var lookup: StockLookup?
     var stockQuote: StockQuote?
+    var inSearchMode = false
+    var stockLookupArray : [StockLookup] = []
+    var stockQuoteArray: [StockQuote] = []
+    
+    
+    var names: [StockLookup] = []
+    var symbolarray: [StockQuote] = []
+    var lookupFilteredArray: [StockLookup] = []
+    var QuoteFilteredArray: [StockQuote] = []
     
     // Outlets
     
@@ -34,7 +43,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.reloadData()
     }
     
     // functions
@@ -80,7 +89,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 self.lookup = result
                 dispatch_async(dispatch_get_main_queue(), {
                     self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                    self.tableView.reloadData()
+//                    self.tableView.reloadData()
                 })
             })
         } else {
@@ -94,7 +103,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 })
             })
         }
-        
+     searchBar.resignFirstResponder()
     }
     
     func updateViewMode() {
@@ -103,11 +112,30 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
             pickupLabel.text = "OR Pick Up A Company "
             pickerView.reloadAllComponents()
         } else {
-            searchBar.placeholder = "Type Symbol Name... example: AAPL"
+            searchBar.placeholder = "Type Symbol... example: AAPL"
             pickupLabel.text = "OR Pick Up A Ticker Symbol"
             pickerView.reloadAllComponents()
         }
     }
+    
+    // filtering search bar 
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            
+        } else {
+            inSearchMode = true
+            if segmentedControl.selectedSegmentIndex == 0 {
+             let string = searchBar.text!
+                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
+            } else {
+                let symbolString = searchBar.text!
+                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
+            }
+        }
+    }
+    
     
     // MARK: - Table view data source
     

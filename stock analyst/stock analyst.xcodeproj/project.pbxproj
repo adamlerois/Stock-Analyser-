@@ -14,9 +14,12 @@
 		544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */; };
 		544E95291CA5DEF900DD7D0A /* LookupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95281CA5DEF900DD7D0A /* LookupResultViewController.swift */; };
 		544E952B1CA5DF0900DD7D0A /* QuoteResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E952A1CA5DF0900DD7D0A /* QuoteResultViewController.swift */; };
-		544E952D1CA60F9200DD7D0A /* ViewAnimationsAndColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E952C1CA60F9200DD7D0A /* ViewAnimationsAndColors.swift */; };
-		544E952F1CA60FB300DD7D0A /* SegmentedControlAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E952E1CA60FB300DD7D0A /* SegmentedControlAnimations.swift */; };
-		544E95311CA60FD300DD7D0A /* TabBarAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95301CA60FD300DD7D0A /* TabBarAnimations.swift */; };
+		544E95381CA7494F00DD7D0A /* stockmarket_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E95371CA7494F00DD7D0A /* stockmarket_bg.jpg */; };
+		544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */; };
+		544E953D1CA74F5B00DD7D0A /* searchbutton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E953C1CA74F5B00DD7D0A /* searchbutton.jpg */; };
+		544E953F1CA74FAC00DD7D0A /* My-Shinny-Go-Button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E953E1CA74FAC00DD7D0A /* My-Shinny-Go-Button.jpg */; };
+		544E95411CA7505500DD7D0A /* gobutotngreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E95401CA7505500DD7D0A /* gobutotngreen.jpg */; };
+		544E95431CA750C600DD7D0A /* go-button-1-copy-300x150.png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95421CA750C600DD7D0A /* go-button-1-copy-300x150.png */; };
 		547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD21CA1D6F9009DBB2D /* StockLookup.swift */; };
 		547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD41CA1D710009DBB2D /* StockQuote.swift */; };
 		547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */; };
@@ -35,9 +38,12 @@
 		544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ../SearchTableViewController.swift; sourceTree = "<group>"; };
 		544E95281CA5DEF900DD7D0A /* LookupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LookupResultViewController.swift; path = ../LookupResultViewController.swift; sourceTree = "<group>"; };
 		544E952A1CA5DF0900DD7D0A /* QuoteResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteResultViewController.swift; path = ../QuoteResultViewController.swift; sourceTree = "<group>"; };
-		544E952C1CA60F9200DD7D0A /* ViewAnimationsAndColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimationsAndColors.swift; sourceTree = "<group>"; };
-		544E952E1CA60FB300DD7D0A /* SegmentedControlAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlAnimations.swift; sourceTree = "<group>"; };
-		544E95301CA60FD300DD7D0A /* TabBarAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAnimations.swift; sourceTree = "<group>"; };
+		544E95371CA7494F00DD7D0A /* stockmarket_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stockmarket_bg.jpg; path = ../../../../../stockmarket_bg.jpg; sourceTree = "<group>"; };
+		544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = searchbarbg.jpg; path = ../../../../../searchbarbg.jpg; sourceTree = "<group>"; };
+		544E953C1CA74F5B00DD7D0A /* searchbutton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = searchbutton.jpg; path = ../../../../../searchbutton.jpg; sourceTree = "<group>"; };
+		544E953E1CA74FAC00DD7D0A /* My-Shinny-Go-Button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "My-Shinny-Go-Button.jpg"; path = "../../../../../My-Shinny-Go-Button.jpg"; sourceTree = "<group>"; };
+		544E95401CA7505500DD7D0A /* gobutotngreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gobutotngreen.jpg; path = ../../../../../gobutotngreen.jpg; sourceTree = "<group>"; };
+		544E95421CA750C600DD7D0A /* go-button-1-copy-300x150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go-button-1-copy-300x150.png"; path = "../../../../../go-button-1-copy-300x150.png"; sourceTree = "<group>"; };
 		547FABD21CA1D6F9009DBB2D /* StockLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookup.swift; sourceTree = "<group>"; };
 		547FABD41CA1D710009DBB2D /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupNetworkController.swift; sourceTree = "<group>"; };
@@ -78,17 +84,36 @@
 			children = (
 				54220EB11CA0F1AF00989734 /* AppDelegate.swift */,
 				54220EB51CA0F1AF00989734 /* Main.storyboard */,
-				544E952C1CA60F9200DD7D0A /* ViewAnimationsAndColors.swift */,
-				544E952E1CA60FB300DD7D0A /* SegmentedControlAnimations.swift */,
-				544E95301CA60FD300DD7D0A /* TabBarAnimations.swift */,
+				544E95321CA73DE200DD7D0A /* Constants */,
 				547FABDD1CA1D76D009DBB2D /* Models */,
 				547FABDC1CA1D763009DBB2D /* Controllers */,
 				547FAC021CA32318009DBB2D /* Views */,
 				54220EB81CA0F1AF00989734 /* Assets.xcassets */,
 				54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */,
 				54220EBD1CA0F1AF00989734 /* Info.plist */,
+				544E95391CA7496C00DD7D0A /* Images */,
 			);
 			path = "stock analyst";
+			sourceTree = "<group>";
+		};
+		544E95321CA73DE200DD7D0A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		544E95391CA7496C00DD7D0A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				544E953E1CA74FAC00DD7D0A /* My-Shinny-Go-Button.jpg */,
+				544E95401CA7505500DD7D0A /* gobutotngreen.jpg */,
+				544E953C1CA74F5B00DD7D0A /* searchbutton.jpg */,
+				544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */,
+				544E95371CA7494F00DD7D0A /* stockmarket_bg.jpg */,
+				544E95421CA750C600DD7D0A /* go-button-1-copy-300x150.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		547FABDC1CA1D763009DBB2D /* Controllers */ = {
@@ -180,6 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
+				544E953D1CA74F5B00DD7D0A /* searchbutton.jpg in Resources */,
+				544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */,
+				544E95411CA7505500DD7D0A /* gobutotngreen.jpg in Resources */,
+				544E95431CA750C600DD7D0A /* go-button-1-copy-300x150.png in Resources */,
+				544E95381CA7494F00DD7D0A /* stockmarket_bg.jpg in Resources */,
+				544E953F1CA74FAC00DD7D0A /* My-Shinny-Go-Button.jpg in Resources */,
 				54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */,
 				54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */,
 			);
@@ -196,15 +227,12 @@
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
 				544E95291CA5DEF900DD7D0A /* LookupResultViewController.swift in Sources */,
 				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
-				544E95311CA60FD300DD7D0A /* TabBarAnimations.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
-				544E952F1CA60FB300DD7D0A /* SegmentedControlAnimations.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,
 				544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */,
 				544E952B1CA5DF0900DD7D0A /* QuoteResultViewController.swift in Sources */,
 				547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */,
-				544E952D1CA60F9200DD7D0A /* ViewAnimationsAndColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

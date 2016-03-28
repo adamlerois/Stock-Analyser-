@@ -15,7 +15,7 @@ class StockQuote {
     static let KlastPrice = "LastPrice"
     static let Kchange = "Change"
     static let KchangePercent = "ChangePercent"
-    static let KtimeStamp = "TimeStamp"
+//    static let KtimeStamp = "TimeStamp"
     static let KmsDate = "MSDate"
     static let KmarketCap = "MarketCap"
     static let Kvolume = "Volume"
@@ -32,7 +32,7 @@ class StockQuote {
     var lastPrice: Double
     var change: Double
     var changePercent: Double
-    var timeStamp: String
+//    var timeStamp: NSDate
     var msDate: Double
     var marketCap: Double
     var volume: Double
@@ -66,7 +66,7 @@ class StockQuote {
         self.symbol = jsonDictionary[StockQuote.Ksymbol] as? String ?? ""
         self.lastPrice = jsonDictionary[StockQuote.KlastPrice] as? Double ?? 0.0
         self.change = jsonDictionary[StockQuote.Kchange] as? Double ?? 0.0
-        self.timeStamp = jsonDictionary[StockQuote.KtimeStamp] as? String ?? ""
+//        self.timeStamp = jsonDictionary[StockQuote.KtimeStamp] as?NSDate
         self.msDate = jsonDictionary[StockQuote.KmsDate] as? Double ?? 0.0
         self.marketCap = jsonDictionary[StockQuote.KmarketCap] as? Double ?? 0.0
         self.volume = jsonDictionary[StockQuote.Kvolume] as? Double ?? 0.0

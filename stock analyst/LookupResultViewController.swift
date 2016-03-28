@@ -15,27 +15,50 @@ class LookupResultViewController: UIViewController {
     
     
     var companyLookup: StockLookup?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateData()
+        
+        
     }
-
+    
+    // stock functions
+    func updateData() {
+        if let name = companyLookup?.name {
+        lookupNameLabel.text = "Name: \(name)"
+        }else {
+            print("company not found")
+        }
+        if let symbol = companyLookup?.symbol {
+        SymbolLookupLabel.text = "Symbol: \(symbol)"
+        }else {
+            print("symbol not found")
+        }
+        if let exchange = companyLookup?.exchange{
+            
+        exchangeLookupLabel.text = "Exchange: \(exchange)"
+        }else {
+            print("exchange not found")
+    }
+    }
+    
+    // bitcoin function 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
