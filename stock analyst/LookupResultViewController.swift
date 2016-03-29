@@ -28,7 +28,7 @@ class LookupResultViewController: UIViewController {
         if let name = companyLookup?.name {
         lookupNameLabel.text = "Name: \(name)"
         }else {
-            print("company not found")
+            alert()
         }
         if let symbol = companyLookup?.symbol {
         SymbolLookupLabel.text = "Symbol: \(symbol)"
@@ -44,6 +44,15 @@ class LookupResultViewController: UIViewController {
     }
     
     // bitcoin function 
+    
+    
+    // alert if there is an error
+    
+    func alert() {
+        let alert = UIAlertController(title: "Error", message: "Please Put A Valid Name Or Symbol", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

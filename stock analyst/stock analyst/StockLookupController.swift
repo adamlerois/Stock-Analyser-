@@ -20,7 +20,7 @@ class StockLookupController {
                 }
                 do {
                     let stockLookupAnyObject = try NSJSONSerialization.JSONObjectWithData(resultData, options: NSJSONReadingOptions.AllowFragments)
-                    if let lookupArray = stockLookupAnyObject as? [[String: AnyObject]], lookupdictionary = lookupArray.first {
+                    if let lookupArray = stockLookupAnyObject as? [[String: AnyObject]], lookupdictionary = lookupArray.first{
                         let stockLookupObject = StockLookup(jsonDictionary: lookupdictionary)
                         
                         completion(result: stockLookupObject)
@@ -36,4 +36,10 @@ class StockLookupController {
          completion(result: nil)
         }
     }
+    
+        
+    
+    
+    
+    
 }

@@ -41,7 +41,7 @@ class QuoteResultViewController: UIViewController {
         if let status = stockQuote?.status {
             openLabel.text = "Status: \(status)"
         }else {
-            print("status error")
+         print("satus error")
         }
         if let low = stockQuote?.low {
             lowLabel.text = "Low: \(low)"
@@ -97,15 +97,23 @@ class QuoteResultViewController: UIViewController {
             
             symbolLabel.text = "Symbol: \(symbol)"
         }else {
-            print("symbol Error")
+          symbolAlert()
         }
         if let name = stockQuote?.name {
             nameLabel.text = "Name: \(name)"
         }else {
-            print("put an Alert here")
+            print("error")
         }
         
     }
+    
+    
+    func symbolAlert() {
+        let symbolAlert = UIAlertController(title: "Error", message: "Please Put A Valid Name Or Symbol", preferredStyle: .Alert)
+        symbolAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(symbolAlert, animated: true, completion: nil)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

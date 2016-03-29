@@ -44,6 +44,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        searchBar.returnKeyType = UIReturnKeyType.Done
+        searchBar.delegate = self
+        
     }
     
     // functions
@@ -69,31 +72,31 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
             let companiesString = self.companies[index]
             StockLookupController.stockLookupSearchByName(companiesString, completion: { (result) in
                 self.lookup = result
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.performSegueWithIdentifier("toResultIdentifier", sender: self)
                 })
             })
         }
     }
     
-
+    
     // Find button tapped For The Search
     
     @IBAction func findButtonTapped(sender: UIButton) {
-        // more things to add
+        
         if segmentedControl.selectedSegmentIndex == 0 {
-            searchBar.resignFirstResponder()
+            //            searchBar.resignFirstResponder()
             let searchText = searchBar.text ?? ""
             StockLookupController.stockLookupSearchByName(searchText, completion: { (result) in
                 self.lookup = result
                 dispatch_async(dispatch_get_main_queue(), {
                     self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-//                    self.tableView.reloadData()
+                    self.tableView.reloadData()
                 })
             })
         } else {
-            searchBar.resignFirstResponder()
+            //            searchBar.resignFirstResponder()
             let searchText = searchBar.text ?? ""
             StockQuoteController.stockQuoteSearchBySymbol(searchText, completion: { (result) in
                 self.stockQuote = result
@@ -103,7 +106,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 })
             })
         }
-     searchBar.resignFirstResponder()
+        searchBar.resignFirstResponder()
     }
     
     func updateViewMode() {
@@ -118,23 +121,25 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         }
     }
     
-    // filtering search bar 
+    // filtering search bar
     
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
-            inSearchMode = false
-            
-        } else {
-            inSearchMode = true
-            if segmentedControl.selectedSegmentIndex == 0 {
-             let string = searchBar.text!
-                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
-            } else {
-                let symbolString = searchBar.text!
-                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
-            }
-        }
-    }
+//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+//        if searchBar.text == nil || searchBar.text == "" {
+//            inSearchMode = false
+//            
+//        } else {
+//            inSearchMode = true
+//            if segmentedControl.selectedSegmentIndex == 0 {
+//                let string = searchBar.text!
+//                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
+//            } else {
+//                let symbolString = searchBar.text!
+//                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
+//            }
+//            self.tableView.reloadData()
+//        }
+//        
+//    }
     
     
     // MARK: - Table view data source
@@ -219,15 +224,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "toQuoteResult" {
-                let resultView = segue.destinationViewController as? QuoteResultViewController
-                resultView?.stockQuote = self.stockQuote
-            } else if segue.identifier == "toResultIdentifier" {
-                let resultView = segue.destinationViewController as? LookupResultViewController
-                resultView?.companyLookup = self.lookup
-            }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toQuoteResult" {
+            let resultView = segue.destinationViewController as? QuoteResultViewController
+            resultView?.stockQuote = self.stockQuote
+        } else if segue.identifier == "toResultIdentifier" {
+            let resultView = segue.destinationViewController as? LookupResultViewController
+            resultView?.companyLookup = self.lookup
         }
+    }
     
     
 }
