@@ -86,25 +86,34 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     @IBAction func findButtonTapped(sender: UIButton) {
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            //            searchBar.resignFirstResponder()
-            let searchText = searchBar.text ?? ""
-            StockLookupController.stockLookupSearchByName(searchText, completion: { (result) in
-                self.lookup = result
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                    self.tableView.reloadData()
+            if searchBar.text == "" {
+                nameAlert()
+            }else {
+                
+                let searchText = searchBar.text
+                
+                StockLookupController.stockLookupSearchByName(searchText!, completion: { (result) in
+                    self.lookup = result
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("toResultIdentifier", sender: self)
+                        self.tableView.reloadData()
+                    })
                 })
-            })
+            }
         } else {
-            //            searchBar.resignFirstResponder()
-            let searchText = searchBar.text ?? ""
-            StockQuoteController.stockQuoteSearchBySymbol(searchText, completion: { (result) in
-                self.stockQuote = result
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                    self.tableView.reloadData()
+            if searchBar.text == "" {
+                symbolAlert()
+            }else {
+                let searchText = searchBar.text
+                
+                StockQuoteController.stockQuoteSearchBySymbol(searchText!, completion: { (result) in
+                    self.stockQuote = result
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.performSegueWithIdentifier("toQuoteResult", sender: self)
+                        self.tableView.reloadData()
+                    })
                 })
-            })
+            }
         }
         searchBar.resignFirstResponder()
     }
@@ -121,25 +130,38 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         }
     }
     
+    // alerts
+    
+    func symbolAlert() {
+        let symbolAlert = UIAlertController(title: "Error", message: "Please Put A Valid Symbol", preferredStyle: .Alert)
+        symbolAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(symbolAlert, animated: true, completion: nil)
+    }
+    func nameAlert() {
+        let alert = UIAlertController(title: "Error", message: "Please Put A Valid Name", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     // filtering search bar
     
-//    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchBar.text == nil || searchBar.text == "" {
-//            inSearchMode = false
-//            
-//        } else {
-//            inSearchMode = true
-//            if segmentedControl.selectedSegmentIndex == 0 {
-//                let string = searchBar.text!
-//                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
-//            } else {
-//                let symbolString = searchBar.text!
-//                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
-//            }
-//            self.tableView.reloadData()
-//        }
-//        
-//    }
+    //    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    //        if searchBar.text == nil || searchBar.text == "" {
+    //            inSearchMode = false
+    //
+    //        } else {
+    //            inSearchMode = true
+    //            if segmentedControl.selectedSegmentIndex == 0 {
+    //                let string = searchBar.text!
+    //                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
+    //            } else {
+    //                let symbolString = searchBar.text!
+    //                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
+    //            }
+    //            self.tableView.reloadData()
+    //        }
+    //
+    //    }
     
     
     // MARK: - Table view data source

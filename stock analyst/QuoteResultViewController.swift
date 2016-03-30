@@ -37,82 +37,36 @@ class QuoteResultViewController: UIViewController {
     // stock functions
     
     func updateLabels() {
-        
-        if let status = stockQuote?.status {
-            openLabel.text = "Status: \(status)"
-        }else {
-         print("satus error")
-        }
-        if let low = stockQuote?.low {
-            lowLabel.text = "Low: \(low)"
-        } else {
-            print("low error")
-        }
-        if let high = stockQuote?.high{
-            highLabel.text = "High: \(high)"
-        }else {
-            print("high error")
-        }
-        if let changePercentYTD = stockQuote?.changePercentYTD {
-            changePercentYTDLabel.text = "Change % YTD: \(changePercentYTD)"
-        }else {
-            print("changePercentYTD Error")
-        }
-        if let changeYTD = stockQuote?.changeYTD {
-            changeYTDLabel.text = "change YTD: \(changeYTD)"
-        }else {
-            print("changeYTD Error")
-        }
-        if let volume = stockQuote?.volume {
-            volumeLabel.text = "Volume: \(volume)"
-        }else {
-            print("volume error")
-        }
-        if let msDate = stockQuote?.msDate {
-            msDateLabel.text = "MSDate: \(msDate)"
-        }else {
-            print("msDate Error")
-        }
-        if let marketCap = stockQuote?.marketCap {
-            marketCapLabel.text = "Market Cap: \(marketCap)"
-        }else {
-            print("marketCap Error")
-        }
-        if let changepercent = stockQuote?.changePercent {
-            changePercentLabel.text = "Change %: \(changepercent)"
-        }else {
-            print("changePercent Error")
-        }
-        if let change = stockQuote?.change {
-            changeLabel.text = "Change: \(change)"
-        }else {
-            print("change Error")
-        }
-        if let lastPrice = stockQuote?.lastPrice {
-            lastPriceLabel.text = "Last Price: \(lastPrice)"
-        }else {
-            print("lastPrice Error")
-        }
         if let symbol = stockQuote?.symbol {
+            nameLabel.text = "Name: \(symbol)"
+            openLabel.text = "Status: \(stockQuote!.open)"
+            lowLabel.text = "Low: \(stockQuote!.low)"
+            highLabel.text = "High: \(stockQuote!.high)"
+            changePercentYTDLabel.text = "Change % YTD: \(stockQuote!.changePercentYTD)"
+            changeYTDLabel.text = "change YTD: \(stockQuote!.changeYTD)"
+            volumeLabel.text = "Volume: \(stockQuote!.volume)"
+            msDateLabel.text = "MSDate: \(stockQuote!.msDate)"
+            marketCapLabel.text = "Market Cap: \(stockQuote!.marketCap)"
+            changePercentLabel.text = "Change %: \(stockQuote!.changePercent)"
+            changeLabel.text = "Change: \(stockQuote!.change)"
+            lastPriceLabel.text = "Last Price: \(stockQuote!.lastPrice)"
+            nameLabel.text = "Symbol: \(stockQuote!.name)"
             
-            symbolLabel.text = "Symbol: \(symbol)"
-        }else {
-          symbolAlert()
-        }
-        if let name = stockQuote?.name {
-            nameLabel.text = "Name: \(name)"
-        }else {
-            print("error")
+        } else {
+            print("it's printing the error")
+            
         }
         
     }
     
-    
-    func symbolAlert() {
-        let symbolAlert = UIAlertController(title: "Error", message: "Please Put A Valid Name Or Symbol", preferredStyle: .Alert)
-        symbolAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        self.presentViewController(symbolAlert, animated: true, completion: nil)
+    // alert
+    func Alert() {
+        let alert = UIAlertController(title: "0 Results", message: "Sorry No Results...Please Put A Valid Symbol", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
+
+   
     
     
     override func didReceiveMemoryWarning() {

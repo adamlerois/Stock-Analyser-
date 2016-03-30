@@ -28,7 +28,7 @@ class LookupResultViewController: UIViewController {
         if let name = companyLookup?.name {
         lookupNameLabel.text = "Name: \(name)"
         }else {
-            alert()
+         Alert()
         }
         if let symbol = companyLookup?.symbol {
         SymbolLookupLabel.text = "Symbol: \(symbol)"
@@ -48,8 +48,8 @@ class LookupResultViewController: UIViewController {
     
     // alert if there is an error
     
-    func alert() {
-        let alert = UIAlertController(title: "Error", message: "Please Put A Valid Name Or Symbol", preferredStyle: .Alert)
+    func Alert() {
+        let alert = UIAlertController(title: "0 Results", message: "Sorry No Results...Please Put A Valid Name", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }

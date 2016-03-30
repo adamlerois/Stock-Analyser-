@@ -18,6 +18,12 @@
 		544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */; };
 		544E95781CAA130300DD7D0A /* button (4).png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95771CAA130300DD7D0A /* button (4).png */; };
 		544E957A1CAA131B00DD7D0A /* button (5).png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95791CAA131B00DD7D0A /* button (5).png */; };
+		544E95931CAB0DA900DD7D0A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95921CAB0DA900DD7D0A /* Currency.swift */; };
+		544E95971CAB5BD200DD7D0A /* CurrencyNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95961CAB5BD200DD7D0A /* CurrencyNetworkController.swift */; };
+		544E95991CAB601800DD7D0A /* CurrencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95981CAB601800DD7D0A /* CurrencyController.swift */; };
+		544E959D1CAB77A500DD7D0A /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */; };
+		544E95A11CAB788200DD7D0A /* CurrencyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */; };
+		544E95A31CAB79CE00DD7D0A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95A21CAB79CE00DD7D0A /* button.png */; };
 		547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD21CA1D6F9009DBB2D /* StockLookup.swift */; };
 		547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD41CA1D710009DBB2D /* StockQuote.swift */; };
 		547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */; };
@@ -40,6 +46,12 @@
 		544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = searchbarbg.jpg; path = ../../../../../searchbarbg.jpg; sourceTree = "<group>"; };
 		544E95771CAA130300DD7D0A /* button (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (4).png"; path = "../../../../../../Downloads/button (4).png"; sourceTree = "<group>"; };
 		544E95791CAA131B00DD7D0A /* button (5).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (5).png"; path = "../../../../../../Downloads/button (5).png"; sourceTree = "<group>"; };
+		544E95921CAB0DA900DD7D0A /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		544E95961CAB5BD200DD7D0A /* CurrencyNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyNetworkController.swift; sourceTree = "<group>"; };
+		544E95981CAB601800DD7D0A /* CurrencyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyController.swift; sourceTree = "<group>"; };
+		544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
+		544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyHomeViewController.swift; sourceTree = "<group>"; };
+		544E95A21CAB79CE00DD7D0A /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../../../../../../Downloads/button.png; sourceTree = "<group>"; };
 		547FABD21CA1D6F9009DBB2D /* StockLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookup.swift; sourceTree = "<group>"; };
 		547FABD41CA1D710009DBB2D /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupNetworkController.swift; sourceTree = "<group>"; };
@@ -80,10 +92,9 @@
 			children = (
 				54220EB11CA0F1AF00989734 /* AppDelegate.swift */,
 				54220EB51CA0F1AF00989734 /* Main.storyboard */,
-				544E95321CA73DE200DD7D0A /* Constants */,
-				547FABDD1CA1D76D009DBB2D /* Models */,
-				547FABDC1CA1D763009DBB2D /* Controllers */,
-				547FAC021CA32318009DBB2D /* Views */,
+				544E95941CAB0E6D00DD7D0A /* Currency */,
+				544E95321CA73DE200DD7D0A /* BitCoin */,
+				544E95911CAB019700DD7D0A /* Stocks */,
 				54220EB81CA0F1AF00989734 /* Assets.xcassets */,
 				54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */,
 				54220EBD1CA0F1AF00989734 /* Info.plist */,
@@ -92,22 +103,69 @@
 			path = "stock analyst";
 			sourceTree = "<group>";
 		};
-		544E95321CA73DE200DD7D0A /* Constants */ = {
+		544E95321CA73DE200DD7D0A /* BitCoin */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Constants;
+			name = BitCoin;
 			sourceTree = "<group>";
 		};
 		544E95391CA7496C00DD7D0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				544E95A21CAB79CE00DD7D0A /* button.png */,
 				544E95771CAA130300DD7D0A /* button (4).png */,
 				544E95791CAA131B00DD7D0A /* button (5).png */,
 				544E953A1CA749FE00DD7D0A /* searchbarbg.jpg */,
 				544E95371CA7494F00DD7D0A /* stockmarket_bg.jpg */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		544E95911CAB019700DD7D0A /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				547FABDD1CA1D76D009DBB2D /* Models */,
+				547FABDC1CA1D763009DBB2D /* Controllers */,
+				547FAC021CA32318009DBB2D /* Views */,
+			);
+			name = Stocks;
+			sourceTree = "<group>";
+		};
+		544E95941CAB0E6D00DD7D0A /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				544E95951CAB102500DD7D0A /* Models */,
+				544E959E1CAB77B500DD7D0A /* Controllers */,
+				544E959F1CAB77C500DD7D0A /* Views */,
+			);
+			name = Currency;
+			sourceTree = "<group>";
+		};
+		544E95951CAB102500DD7D0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				544E95921CAB0DA900DD7D0A /* Currency.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		544E959E1CAB77B500DD7D0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				544E95961CAB5BD200DD7D0A /* CurrencyNetworkController.swift */,
+				544E95981CAB601800DD7D0A /* CurrencyController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		544E959F1CAB77C500DD7D0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */,
+				544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		547FABDC1CA1D763009DBB2D /* Controllers */ = {
@@ -199,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
+				544E95A31CAB79CE00DD7D0A /* button.png in Resources */,
 				544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */,
 				544E95381CA7494F00DD7D0A /* stockmarket_bg.jpg in Resources */,
 				544E95781CAA130300DD7D0A /* button (4).png in Resources */,
@@ -215,15 +274,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544E95991CAB601800DD7D0A /* CurrencyController.swift in Sources */,
 				547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */,
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
 				544E95291CA5DEF900DD7D0A /* LookupResultViewController.swift in Sources */,
+				544E95971CAB5BD200DD7D0A /* CurrencyNetworkController.swift in Sources */,
 				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
+				544E95931CAB0DA900DD7D0A /* Currency.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,
+				544E959D1CAB77A500DD7D0A /* CurrencyTableViewController.swift in Sources */,
 				544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */,
 				544E952B1CA5DF0900DD7D0A /* QuoteResultViewController.swift in Sources */,
+				544E95A11CAB788200DD7D0A /* CurrencyHomeViewController.swift in Sources */,
 				547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

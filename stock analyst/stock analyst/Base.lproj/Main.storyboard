@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stockmarket_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockmarket_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-c1-h90">
@@ -192,12 +192,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97363158569784236" green="1" blue="0.79360839326254795" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MTe-dw-Cpz" firstAttribute="leading" secondItem="LbC-8i-x85" secondAttribute="leading" id="Z5N-wS-knD"/>
-                            <constraint firstItem="MTe-dw-Cpz" firstAttribute="bottom" secondItem="SCy-hc-EGV" secondAttribute="top" id="gEm-kb-Grr"/>
+                            <constraint firstAttribute="bottom" secondItem="MTe-dw-Cpz" secondAttribute="bottom" id="3Zw-Xl-oQ1"/>
+                            <constraint firstItem="MTe-dw-Cpz" firstAttribute="top" secondItem="WOn-OH-KFY" secondAttribute="bottom" id="4e9-ga-fDf"/>
+                            <constraint firstItem="MTe-dw-Cpz" firstAttribute="leading" secondItem="LbC-8i-x85" secondAttribute="leading" id="ame-0u-mdZ"/>
                             <constraint firstItem="2xB-c1-h90" firstAttribute="top" secondItem="WOn-OH-KFY" secondAttribute="bottom" constant="99" id="gYZ-TR-GYk"/>
                             <constraint firstItem="2xB-c1-h90" firstAttribute="leading" secondItem="LbC-8i-x85" secondAttribute="leadingMargin" id="lSD-5v-WXD"/>
-                            <constraint firstAttribute="trailing" secondItem="MTe-dw-Cpz" secondAttribute="trailing" id="qG8-fv-85q"/>
-                            <constraint firstItem="MTe-dw-Cpz" firstAttribute="top" secondItem="WOn-OH-KFY" secondAttribute="bottom" id="yYT-77-1w5"/>
+                            <constraint firstAttribute="trailing" secondItem="MTe-dw-Cpz" secondAttribute="trailing" id="rg8-1q-e0K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lookup Results" id="beY-pE-Klg">
@@ -357,7 +357,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLZ-PD-pcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="1390"/>
+            <point key="canvasLocation" x="2355" y="1382"/>
+        </scene>
+        <!--Currency Home View Controller-->
+        <scene sceneID="WJB-p1-JRz">
+            <objects>
+                <viewController id="fLH-uh-nuQ" customClass="CurrencyHomeViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eh9-ov-7mn"/>
+                        <viewControllerLayoutGuide type="bottom" id="wjn-9t-kU2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EiB-OO-5Xv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
+                                <rect key="frame" x="212" y="280" width="176" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="TXH-UA-Eo2"/>
+                                </constraints>
+                                <state key="normal" title="Get Rates" image="button.png"/>
+                                <connections>
+                                    <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
+                                    <segue destination="PtX-M7-qPx" kind="show" identifier="showCurrencies" id="g9n-58-pO1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-Wg-3QE">
+                                <rect key="frame" x="140" y="106" width="321" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="vtE-Ik-nN9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="GhB-Wg-3QE" secondAttribute="bottom" constant="22" id="9ji-7j-wqB"/>
+                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="fy4-tm-fu9" secondAttribute="centerX" id="aQS-CV-9z2"/>
+                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="86" id="bqB-YX-RwU"/>
+                            <constraint firstItem="fy4-tm-fu9" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="cUP-OP-axv"/>
+                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="260" id="gNt-8H-Pt1"/>
+                            <constraint firstItem="fy4-tm-fu9" firstAttribute="centerY" secondItem="EiB-OO-5Xv" secondAttribute="centerY" id="i6s-yx-qNT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CurrencyRates" destination="fy4-tm-fu9" id="aeQ-en-dJV"/>
+                        <outlet property="titleLabel" destination="GhB-Wg-3QE" id="KCM-eM-OkV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjR-li-Och" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="-190"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="xw8-hR-vhp">
+            <objects>
+                <tableViewController id="PtX-M7-qPx" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="bE6-lC-vnZ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE6-lC-vnZ" id="yGS-lj-ujs">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PtX-M7-qPx" id="YKs-It-VtH"/>
+                            <outlet property="delegate" destination="PtX-M7-qPx" id="Of4-LW-FhM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19Q-at-3f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="-190"/>
         </scene>
         <!--Stocks-->
         <scene sceneID="oTA-Ub-1mb">
@@ -399,6 +479,7 @@
     <resources>
         <image name="button (4).png" width="87" height="46"/>
         <image name="button (5).png" width="74" height="46"/>
+        <image name="button.png" width="190" height="40"/>
         <image name="stockmarket_bg.jpg" width="852" height="480"/>
     </resources>
 </document>

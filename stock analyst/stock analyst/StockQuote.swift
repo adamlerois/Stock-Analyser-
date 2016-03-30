@@ -66,7 +66,7 @@ class StockQuote {
         self.symbol = jsonDictionary[StockQuote.Ksymbol] as? String ?? ""
         self.lastPrice = jsonDictionary[StockQuote.KlastPrice] as? Double ?? 0.0
         self.change = jsonDictionary[StockQuote.Kchange] as? Double ?? 0.0
-//        self.timeStamp = jsonDictionary[StockQuote.KtimeStamp] as?NSDate
+//        self.timeStamp = jsonDictionary[StockQuote.KtimeStamp] as? NSDate
         self.msDate = jsonDictionary[StockQuote.KmsDate] as? Double ?? 0.0
         self.marketCap = jsonDictionary[StockQuote.KmarketCap] as? Double ?? 0.0
         self.volume = jsonDictionary[StockQuote.Kvolume] as? Double ?? 0.0
