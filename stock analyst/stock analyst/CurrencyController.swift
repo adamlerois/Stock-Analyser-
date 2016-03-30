@@ -9,22 +9,27 @@
 import Foundation
 import UIKit
 class CurrencyController {
-    static let baseURLString = "http://api.fixer.io/latest?base=USA"
-    static func getCurrencyWithSearchTerm(searchTerm: String, completion:(currencies: Currency?)-> Void) {
+    static let baseURLString = "http://api.fixer.io/latest?base="
+    static func getCurrency(base: String, completion:(currencies: [Currency])-> Void) {
+        let searchString = baseURLString + "\(base)"
         
-        
-      CurrencyNetworkController.dataAtURL(baseURLString) { (data) in
-        guard let data = data,
-            jsonDictionary = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) else {
-                print("json could not be serialized from data ")
-                completion(currencies: nil)
-                return
+        CurrencyNetworkController.dataAtURL(searchString) { (data) in
+            guard let data = data,
+                jsonAnyObject = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments),
+                jsonDictionary = jsonAnyObject as? [String: AnyObject],
+                base = jsonDictionary["base"] as? String,
+                ratesDictionary = jsonDictionary["rates"] as? [String: Double] else {
+                    print("json could not be serialized from data ")
+                    completion(currencies: [])
+                    return
+            }
+            var currencyArray = [Currency]()
+            for (currencyUnit, currencyPrice) in ratesDictionary {
+                let currency = Currency(base: base,currencyUnit: currencyUnit, currencyPrice: currencyPrice)
+                currencyArray.append(currency)
+                
+            }
+            completion(currencies: currencyArray)
         }
-        var currencyObject: Currency?
-        if let ResultDictionary = jsonDictionary as? [String: AnyObject] {
-            currencyObject = Currency(jsonDictionary: ResultDictionary)
-        }
-        completion(currencies: currencyObject)
     }
-}
 }

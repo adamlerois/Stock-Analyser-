@@ -37,20 +37,20 @@ class QuoteResultViewController: UIViewController {
     // stock functions
     
     func updateLabels() {
-        if let symbol = stockQuote?.symbol {
-            nameLabel.text = "Name: \(symbol)"
-            openLabel.text = "Status: \(stockQuote!.open)"
-            lowLabel.text = "Low: \(stockQuote!.low)"
-            highLabel.text = "High: \(stockQuote!.high)"
-            changePercentYTDLabel.text = "Change % YTD: \(stockQuote!.changePercentYTD)"
-            changeYTDLabel.text = "change YTD: \(stockQuote!.changeYTD)"
-            volumeLabel.text = "Volume: \(stockQuote!.volume)"
-            msDateLabel.text = "MSDate: \(stockQuote!.msDate)"
-            marketCapLabel.text = "Market Cap: \(stockQuote!.marketCap)"
-            changePercentLabel.text = "Change %: \(stockQuote!.changePercent)"
-            changeLabel.text = "Change: \(stockQuote!.change)"
-            lastPriceLabel.text = "Last Price: \(stockQuote!.lastPrice)"
-            nameLabel.text = "Symbol: \(stockQuote!.name)"
+        if let stockQuote = stockQuote {
+            nameLabel.text = "Name: \(stockQuote.name)"
+            openLabel.text = "Status: \(stockQuote.open)"
+            lowLabel.text = "Low: \(stockQuote.low)"
+            highLabel.text = "High: \(stockQuote.high)"
+            changePercentYTDLabel.text = "Change % YTD: \(stockQuote.changePercentYTD)"
+            changeYTDLabel.text = "change YTD: \(stockQuote.changeYTD)"
+            volumeLabel.text = "Volume: \(stockQuote.volume)"
+            msDateLabel.text = "MSDate: \(stockQuote.msDate)"
+            marketCapLabel.text = "Market Cap: \(stockQuote.marketCap)"
+            changePercentLabel.text = "Change %: \(stockQuote.changePercent)"
+            changeLabel.text = "Change: \(stockQuote.change)"
+            lastPriceLabel.text = "Last Price: \(stockQuote.lastPrice)"
+            symbolLabel.text = "Symbol: \(stockQuote.symbol)"
             
         } else {
             print("it's printing the error")

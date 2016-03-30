@@ -372,20 +372,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
-                                <rect key="frame" x="212" y="280" width="176" height="39"/>
+                                <rect key="frame" x="212" y="280" width="176" height="73"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="TXH-UA-Eo2"/>
+                                    <constraint firstAttribute="height" constant="73" id="6Yr-Eq-4xU"/>
+                                    <constraint firstAttribute="width" constant="176" id="yBg-F3-alS"/>
                                 </constraints>
                                 <state key="normal" title="Get Rates" image="button.png"/>
                                 <connections>
                                     <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
-                                    <segue destination="PtX-M7-qPx" kind="show" identifier="showCurrencies" id="g9n-58-pO1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-Wg-3QE">
                                 <rect key="frame" x="140" y="106" width="321" height="152"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="321" id="vtE-Ik-nN9"/>
+                                    <constraint firstAttribute="width" constant="321" id="wOy-gE-WCB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -394,38 +394,55 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="GhB-Wg-3QE" secondAttribute="bottom" constant="22" id="9ji-7j-wqB"/>
-                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="fy4-tm-fu9" secondAttribute="centerX" id="aQS-CV-9z2"/>
-                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="86" id="bqB-YX-RwU"/>
-                            <constraint firstItem="fy4-tm-fu9" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="cUP-OP-axv"/>
-                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="260" id="gNt-8H-Pt1"/>
-                            <constraint firstItem="fy4-tm-fu9" firstAttribute="centerY" secondItem="EiB-OO-5Xv" secondAttribute="centerY" id="i6s-yx-qNT"/>
+                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="GhB-Wg-3QE" secondAttribute="bottom" constant="22" id="9eZ-Rr-0yy"/>
+                            <constraint firstItem="wjn-9t-kU2" firstAttribute="top" secondItem="fy4-tm-fu9" secondAttribute="bottom" constant="198" id="Cjg-fz-0Wz"/>
+                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="42" id="dfz-Cs-dWi"/>
+                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="pha-Gs-GrO"/>
+                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="fy4-tm-fu9" secondAttribute="centerX" id="y5U-cr-6aR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V3i-5j-czE"/>
                     <connections>
                         <outlet property="CurrencyRates" destination="fy4-tm-fu9" id="aeQ-en-dJV"/>
                         <outlet property="titleLabel" destination="GhB-Wg-3QE" id="KCM-eM-OkV"/>
+                        <segue destination="PtX-M7-qPx" kind="show" identifier="showCurrencies" id="hWo-By-Ea2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FjR-li-Och" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="-190"/>
+            <point key="canvasLocation" x="1649" y="-190"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Currency Table View Controller-->
         <scene sceneID="xw8-hR-vhp">
             <objects>
-                <tableViewController id="PtX-M7-qPx" sceneMemberID="viewController">
+                <tableViewController id="PtX-M7-qPx" customClass="CurrencyTableViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="bE6-lC-vnZ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="y9x-DU-y2U" detailTextLabel="ZdR-cc-t9A" style="IBUITableViewCellStyleValue1" id="bE6-lC-vnZ">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE6-lC-vnZ" id="yGS-lj-ujs">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y9x-DU-y2U">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZdR-cc-t9A">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -437,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19Q-at-3f9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-190"/>
+            <point key="canvasLocation" x="2387" y="-190"/>
         </scene>
         <!--Stocks-->
         <scene sceneID="oTA-Ub-1mb">
@@ -469,11 +486,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="AjP-Xe-4nr" kind="relationship" relationship="viewControllers" id="HIc-cm-axT"/>
+                        <segue destination="LXZ-g0-Ysc" kind="relationship" relationship="viewControllers" id="Myc-R1-Bz5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6R5-Yr-i9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="570"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7vE-xa-x9E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LXZ-g0-Ysc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xyl-tg-bK7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cwg-6U-GYv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fLH-uh-nuQ" kind="relationship" relationship="rootViewController" id="dyy-9u-XmQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oo-M9-n6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="-190"/>
         </scene>
     </scenes>
     <resources>

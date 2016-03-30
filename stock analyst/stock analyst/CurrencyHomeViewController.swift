@@ -9,7 +9,7 @@
 import UIKit
 
 class CurrencyHomeViewController: UIViewController {
-    var currencies: Currency?
+    var currencies: [Currency] = []
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var CurrencyRates: UIButton!
@@ -17,6 +17,8 @@ class CurrencyHomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,16 +27,28 @@ class CurrencyHomeViewController: UIViewController {
     }
     
     @IBAction func currencyRatesTapped(sender: UIButton) {
+        
+        CurrencyController.getCurrency("USD") { (currencies) in
+        
+            dispatch_async(dispatch_get_main_queue(), {
+                self.currencies = currencies
+               print("data coming and going through")
+                self.performSegueWithIdentifier("showCurrencies", sender: self)
+            })
+        
+        
+        }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showCurrencies" {
+         let destination = segue.destinationViewController as? CurrencyTableViewController
+            destination?.currencyUnits = self.currencies
+        }
     }
-    */
-
+    
 }
