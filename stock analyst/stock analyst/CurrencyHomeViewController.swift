@@ -11,6 +11,7 @@ import UIKit
 class CurrencyHomeViewController: UIViewController {
     var currencies: [Currency] = []
 
+    @IBOutlet weak var clickToGetRateLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var CurrencyRates: UIButton!
     override func viewDidLoad() {

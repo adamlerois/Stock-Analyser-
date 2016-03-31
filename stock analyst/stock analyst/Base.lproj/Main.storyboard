@@ -371,39 +371,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
-                                <rect key="frame" x="212" y="280" width="176" height="73"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="6Yr-Eq-4xU"/>
-                                    <constraint firstAttribute="width" constant="176" id="yBg-F3-alS"/>
-                                </constraints>
-                                <state key="normal" title="Get Rates" image="button.png"/>
-                                <connections>
-                                    <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-Wg-3QE">
-                                <rect key="frame" x="140" y="106" width="321" height="152"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="321" id="wOy-gE-WCB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YEf-L6-9U7">
+                                <rect key="frame" x="140" y="106" width="321" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Rates Are Against USD. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-Wg-3QE">
+                                        <rect key="frame" x="0.0" y="0.0" width="321" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="321" id="wOy-gE-WCB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
+                                        <rect key="frame" x="73" y="21" width="176" height="73"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="73" id="6Yr-Eq-4xU"/>
+                                            <constraint firstAttribute="width" constant="176" id="yBg-F3-alS"/>
+                                        </constraints>
+                                        <state key="normal" title="Get Rates" image="button.png"/>
+                                        <connections>
+                                            <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Rates Button" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-dG-P53">
+                                        <rect key="frame" x="90" y="94" width="141" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fy4-tm-fu9" firstAttribute="top" secondItem="GhB-Wg-3QE" secondAttribute="bottom" constant="22" id="9eZ-Rr-0yy"/>
-                            <constraint firstItem="wjn-9t-kU2" firstAttribute="top" secondItem="fy4-tm-fu9" secondAttribute="bottom" constant="198" id="Cjg-fz-0Wz"/>
-                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="42" id="dfz-Cs-dWi"/>
-                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="pha-Gs-GrO"/>
-                            <constraint firstItem="GhB-Wg-3QE" firstAttribute="centerX" secondItem="fy4-tm-fu9" secondAttribute="centerX" id="y5U-cr-6aR"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="42" id="k95-1J-u8t"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="xoc-c8-Qm2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V3i-5j-czE"/>
                     <connections>
                         <outlet property="CurrencyRates" destination="fy4-tm-fu9" id="aeQ-en-dJV"/>
+                        <outlet property="clickToGetRateLabel" destination="Gcb-dG-P53" id="6bP-Hx-9jk"/>
                         <outlet property="titleLabel" destination="GhB-Wg-3QE" id="KCM-eM-OkV"/>
                         <segue destination="PtX-M7-qPx" kind="show" identifier="showCurrencies" id="hWo-By-Ea2"/>
                     </connections>
@@ -421,7 +430,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="y9x-DU-y2U" detailTextLabel="ZdR-cc-t9A" style="IBUITableViewCellStyleValue1" id="bE6-lC-vnZ">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" textLabel="y9x-DU-y2U" detailTextLabel="ZdR-cc-t9A" style="IBUITableViewCellStyleValue1" id="bE6-lC-vnZ">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE6-lC-vnZ" id="yGS-lj-ujs">
@@ -429,21 +438,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y9x-DU-y2U">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <rect key="frame" x="15" y="11" width="39" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="1" green="0.27101846678338803" blue="0.16443090285845252" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZdR-cc-t9A">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <rect key="frame" x="534" y="11" width="51" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.99915404890000004" green="1" blue="0.81625582360000004" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
