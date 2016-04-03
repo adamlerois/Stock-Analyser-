@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         let tabBarController = self.window?.rootViewController as! UITabBarController
-        tabBarController.tabBar.barTintColor = UIColor.grayColor()
-        
+        tabBarController.tabBar.barTintColor = UIColor.whiteColor()
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blackColor()], forState: .Normal)
         
         return true
     }

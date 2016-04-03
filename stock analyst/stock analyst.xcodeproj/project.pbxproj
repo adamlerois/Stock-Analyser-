@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		541B2AFE1CAF09E700B1AC24 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B2AFD1CAF09E700B1AC24 /* ChartViewController.swift */; };
 		541B2B001CAF136600B1AC24 /* button (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2AFF1CAF136600B1AC24 /* button (1).png */; };
+		541B2B021CB0A5B100B1AC24 /* dollarSignTabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */; };
+		541B2B041CB0A5C900B1AC24 /* rsz_financial_report-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */; };
+		541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */; };
 		54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54220EB11CA0F1AF00989734 /* AppDelegate.swift */; };
 		54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB51CA0F1AF00989734 /* Main.storyboard */; };
 		54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB81CA0F1AF00989734 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		541B2AFD1CAF09E700B1AC24 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ../ChartViewController.swift; sourceTree = "<group>"; };
 		541B2AFF1CAF136600B1AC24 /* button (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (1).png"; path = "../../../../../../Downloads/button (1).png"; sourceTree = "<group>"; };
+		541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dollarSignTabbar.png; path = ../../../../../../Downloads/dollarSignTabbar.png; sourceTree = "<group>"; };
+		541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_financial_report-512.png"; path = "../../../../../../Downloads/rsz_financial_report-512.png"; sourceTree = "<group>"; };
+		541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_stock_market-512.png"; path = "../../../../../../Downloads/rsz_stock_market-512.png"; sourceTree = "<group>"; };
 		54220EAE1CA0F1AF00989734 /* stock analyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stock analyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54220EB11CA0F1AF00989734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54220EB61CA0F1AF00989734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 		544E95391CA7496C00DD7D0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */,
+				541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */,
+				541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */,
 				541B2AFF1CAF136600B1AC24 /* button (1).png */,
 				544E95AC1CACE1B800DD7D0A /* currencyimage.jpg */,
 				544E95A21CAB79CE00DD7D0A /* button.png */,
@@ -269,8 +278,11 @@
 				544E95AD1CACE1B800DD7D0A /* currencyimage.jpg in Resources */,
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
 				544E95A31CAB79CE00DD7D0A /* button.png in Resources */,
+				541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */,
 				541B2B001CAF136600B1AC24 /* button (1).png in Resources */,
 				544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */,
+				541B2B021CB0A5B100B1AC24 /* dollarSignTabbar.png in Resources */,
+				541B2B041CB0A5C900B1AC24 /* rsz_financial_report-512.png in Resources */,
 				544E95381CA7494F00DD7D0A /* stockmarket_bg.jpg in Resources */,
 				544E95781CAA130300DD7D0A /* button (4).png in Resources */,
 				54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */,

@@ -13,7 +13,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     enum SegmentedControlViewMode: Int {
         case Lookup = 0
         case Quote = 1
-        
     }
     var viewMode: SegmentedControlViewMode {
         return SegmentedControlViewMode(rawValue: segmentedControl.selectedSegmentIndex)!
@@ -45,8 +44,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-//        searchBar.returnKeyType = UIReturnKeyType.Done
-        searchBar.delegate = self
+        
+    // searchBar.returnKeyType = UIReturnKeyType.Done
+        
+//        searchBar.delegate = self
         tableView.scrollEnabled = false
         
         
@@ -59,13 +60,31 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
             searchBar.text = ""
             searchBar.resignFirstResponder()
         }
+        
+        
+        func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+            if searchBar.text == nil || searchBar.text == "" {
+                inSearchMode = false
+                
+            } else {
+                inSearchMode = true
+                if segmentedControl.selectedSegmentIndex == 0 {
+                    let string = searchBar.text!
+                    lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
+                } else {
+                    let symbolString = searchBar.text!
+                    QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
+                }
+                self.tableView.reloadData()
+            }
+        }
+
+        
+        
     }
     
     // functions
-    
-    
    
-    
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
         updateViewMode()
     }
@@ -95,7 +114,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         }
     }
     
-    
     // Find button tapped For The Search
     
     @IBAction func findButtonTapped(sender: UIButton) {
@@ -104,9 +122,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
             if searchBar.text == "" {
                 nameAlert()
             }else {
-                
                 let searchText = searchBar.text
-                
                 StockLookupController.stockLookupSearchByName(searchText!, completion: { (result) in
                     self.lookup = result
                     dispatch_async(dispatch_get_main_queue(), {
@@ -115,12 +131,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                     })
                 })
             }
-        } else {
-            if searchBar.text == "" {
+        }
+            
+        else {
+                if searchBar.text == ""   {
                 symbolAlert()
+                
             }else {
                 let searchText = searchBar.text
-                
                 StockQuoteController.stockQuoteSearchBySymbol(searchText!, completion: { (result) in
                     self.stockQuote = result
                     dispatch_async(dispatch_get_main_queue(), {
@@ -129,9 +147,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                     })
                 })
             }
+          
+            self.searchBar.endEditing(true)
         }
-        self.searchBar.endEditing(true)
-    
     }
     
     func updateViewMode() {
@@ -159,26 +177,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    // filtering search bar
-    
-    //    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    //        if searchBar.text == nil || searchBar.text == "" {
-    //            inSearchMode = false
-    //
-    //        } else {
-    //            inSearchMode = true
-    //            if segmentedControl.selectedSegmentIndex == 0 {
-    //                let string = searchBar.text!
-    //                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
-    //            } else {
-    //                let symbolString = searchBar.text!
-    //                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
-    //            }
-    //            self.tableView.reloadData()
-    //        }
-    //
-    //    }
-    
+     // filtering search bar
     
     // MARK: - Table view data source
     

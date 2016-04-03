@@ -512,7 +512,7 @@
         <scene sceneID="oTA-Ub-1mb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjP-Xe-4nr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stocks" id="u79-VI-lC9"/>
+                    <tabBarItem key="tabBarItem" title="Stocks" image="rsz_financial_report-512.png" id="u79-VI-lC9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WLY-gM-TWu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -551,7 +551,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Oo-M9-n6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LXZ-g0-Ysc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Currency" id="Xyl-tg-bK7"/>
+                    <tabBarItem key="tabBarItem" title="Currency" image="dollarSignTabbar.png" id="Xyl-tg-bK7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cwg-6U-GYv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -569,7 +569,7 @@
         <scene sceneID="z0v-Mp-pMq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wie-Nk-VRg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chart" id="yhP-7e-XCs"/>
+                    <tabBarItem key="tabBarItem" title="Chart" image="rsz_stock_market-512.png" id="yhP-7e-XCs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K8t-cw-K4h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -591,6 +591,9 @@
         <image name="button (5).png" width="74" height="46"/>
         <image name="button.png" width="190" height="40"/>
         <image name="currencyimage.jpg" width="888" height="540"/>
+        <image name="dollarSignTabbar.png" width="25" height="25"/>
+        <image name="rsz_financial_report-512.png" width="25" height="25"/>
+        <image name="rsz_stock_market-512.png" width="25" height="25"/>
         <image name="stockmarket_bg.jpg" width="852" height="480"/>
     </resources>
 </document>

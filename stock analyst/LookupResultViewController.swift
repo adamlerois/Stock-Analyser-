@@ -25,25 +25,19 @@ class LookupResultViewController: UIViewController {
     
     // stock functions
     func updateData() {
-        if let name = companyLookup?.name {
-        lookupNameLabel.text = "Name: \(name)"
-        }else {
-         Alert()
-        }
-        if let symbol = companyLookup?.symbol {
-        SymbolLookupLabel.text = "Symbol: \(symbol)"
-        }else {
-            print("symbol not found")
-        }
-        if let exchange = companyLookup?.exchange{
+        if let companyLookup = companyLookup {
+            lookupNameLabel.text = "Name: \(companyLookup.name)"
             
-        exchangeLookupLabel.text = "Exchange: \(exchange)"
+            SymbolLookupLabel.text = "Symbol: \(companyLookup.symbol)"
+            
+            exchangeLookupLabel.text = "Exchange: \(companyLookup.exchange)"
+            
         }else {
-            print("exchange not found")
-    }
+            print("Error")
+        }
     }
     
-    // bitcoin function 
+    // bitcoin function
     
     
     // alert if there is an error
