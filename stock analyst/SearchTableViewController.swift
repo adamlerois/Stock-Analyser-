@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIBarPositioningDelegate {
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIBarPositioningDelegate, UITextFieldDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     enum SegmentedControlViewMode: Int {
         case Lookup = 0
@@ -18,6 +18,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     var viewMode: SegmentedControlViewMode {
         return SegmentedControlViewMode(rawValue: segmentedControl.selectedSegmentIndex)!
     }
+    
     
     //MARK: - properties
     let companies = ["Apple", "Alphabet Inc", "Microsoft", "Berkshire Hathaway", "Exxon Mobil", "Facebook", "Johnson & Johnson", "General Electric", "Amazon", "Wells Fargo", "AT&T", " Procter & Gamble", "JPMorgan Chase", "Verizon Communications", "Wal-Mart", "Coca-Cola", "Chevron", "Pfizer", "Visa", "Oracle", "Home Depot", "Disney", "Intel", "Philip Morris International", "PepsiCo", "Comcast", "Merck", "Cisco Systems", "Bank Of America", "IBM", "Citigroup", "Gilead Sciences", "Altria", "UnitedHealth Group", "McDonald's", "CVS Health", "Amgen", "NIKE Inc", "Medtronic", "Allergan", "Bristol-Myers Squibb", "Mastercard Inc", "3M", "Kraft Heinz Co", "United Parcel Service", "Schlumberger", "AbbVie Inc", "Walgreens Boots Alliance", "Boeing", "Starbucks Corp"]
@@ -44,12 +45,27 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-        searchBar.returnKeyType = UIReturnKeyType.Done
+//        searchBar.returnKeyType = UIReturnKeyType.Done
         searchBar.delegate = self
+        tableView.scrollEnabled = false
         
+        
+        func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+            self.searchBar.showsCancelButton = true
+        }
+        
+        func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+            searchBar.showsCancelButton = false
+            searchBar.text = ""
+            searchBar.resignFirstResponder()
+        }
     }
     
     // functions
+    
+    
+   
+    
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
         updateViewMode()
     }
@@ -64,7 +80,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 self.stockQuote = stocks
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                    
                 })
             }
         } else {
@@ -115,7 +130,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 })
             }
         }
-        searchBar.resignFirstResponder()
+        self.searchBar.endEditing(true)
+    
     }
     
     func updateViewMode() {

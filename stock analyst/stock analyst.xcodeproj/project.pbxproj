@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		541B2AFE1CAF09E700B1AC24 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541B2AFD1CAF09E700B1AC24 /* ChartViewController.swift */; };
+		541B2B001CAF136600B1AC24 /* button (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2AFF1CAF136600B1AC24 /* button (1).png */; };
 		54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54220EB11CA0F1AF00989734 /* AppDelegate.swift */; };
 		54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB51CA0F1AF00989734 /* Main.storyboard */; };
 		54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB81CA0F1AF00989734 /* Assets.xcassets */; };
@@ -24,6 +26,7 @@
 		544E959D1CAB77A500DD7D0A /* CurrencyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */; };
 		544E95A11CAB788200DD7D0A /* CurrencyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */; };
 		544E95A31CAB79CE00DD7D0A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95A21CAB79CE00DD7D0A /* button.png */; };
+		544E95AD1CACE1B800DD7D0A /* currencyimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 544E95AC1CACE1B800DD7D0A /* currencyimage.jpg */; };
 		547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD21CA1D6F9009DBB2D /* StockLookup.swift */; };
 		547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD41CA1D710009DBB2D /* StockQuote.swift */; };
 		547FABD71CA1D72A009DBB2D /* LookupNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */; };
@@ -33,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		541B2AFD1CAF09E700B1AC24 /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartViewController.swift; path = ../ChartViewController.swift; sourceTree = "<group>"; };
+		541B2AFF1CAF136600B1AC24 /* button (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (1).png"; path = "../../../../../../Downloads/button (1).png"; sourceTree = "<group>"; };
 		54220EAE1CA0F1AF00989734 /* stock analyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stock analyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54220EB11CA0F1AF00989734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54220EB61CA0F1AF00989734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewController.swift; sourceTree = "<group>"; };
 		544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyHomeViewController.swift; sourceTree = "<group>"; };
 		544E95A21CAB79CE00DD7D0A /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = ../../../../../../Downloads/button.png; sourceTree = "<group>"; };
+		544E95AC1CACE1B800DD7D0A /* currencyimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = currencyimage.jpg; path = ../../../../../currencyimage.jpg; sourceTree = "<group>"; };
 		547FABD21CA1D6F9009DBB2D /* StockLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookup.swift; sourceTree = "<group>"; };
 		547FABD41CA1D710009DBB2D /* StockQuote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuote.swift; sourceTree = "<group>"; };
 		547FABD61CA1D72A009DBB2D /* LookupNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookupNetworkController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,8 @@
 		544E95391CA7496C00DD7D0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				541B2AFF1CAF136600B1AC24 /* button (1).png */,
+				544E95AC1CACE1B800DD7D0A /* currencyimage.jpg */,
 				544E95A21CAB79CE00DD7D0A /* button.png */,
 				544E95771CAA130300DD7D0A /* button (4).png */,
 				544E95791CAA131B00DD7D0A /* button (5).png */,
@@ -162,6 +170,7 @@
 		544E959F1CAB77C500DD7D0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				541B2AFD1CAF09E700B1AC24 /* ChartViewController.swift */,
 				544E959C1CAB77A500DD7D0A /* CurrencyTableViewController.swift */,
 				544E95A01CAB788200DD7D0A /* CurrencyHomeViewController.swift */,
 			);
@@ -230,6 +239,7 @@
 				TargetAttributes = {
 					54220EAD1CA0F1AF00989734 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = CPCB6J4PKB;
 					};
 				};
 			};
@@ -256,8 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544E95AD1CACE1B800DD7D0A /* currencyimage.jpg in Resources */,
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
 				544E95A31CAB79CE00DD7D0A /* button.png in Resources */,
+				541B2B001CAF136600B1AC24 /* button (1).png in Resources */,
 				544E953B1CA749FE00DD7D0A /* searchbarbg.jpg in Resources */,
 				544E95381CA7494F00DD7D0A /* stockmarket_bg.jpg in Resources */,
 				544E95781CAA130300DD7D0A /* button (4).png in Resources */,
@@ -279,6 +291,7 @@
 				547FABD31CA1D6F9009DBB2D /* StockLookup.swift in Sources */,
 				544E95291CA5DEF900DD7D0A /* LookupResultViewController.swift in Sources */,
 				544E95971CAB5BD200DD7D0A /* CurrencyNetworkController.swift in Sources */,
+				541B2AFE1CAF09E700B1AC24 /* ChartViewController.swift in Sources */,
 				547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */,
 				547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */,
 				54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */,
@@ -399,9 +412,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "stock analyst/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "----------------com.sunnydaysolution.stock-analyst";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunnydaysolution.stock-analyst";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -410,9 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "stock analyst/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "----------------com.sunnydaysolution.stock-analyst";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sunnydaysolution.stock-analyst";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

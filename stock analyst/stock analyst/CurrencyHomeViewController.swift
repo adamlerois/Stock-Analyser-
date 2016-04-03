@@ -26,6 +26,14 @@ class CurrencyHomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func CurrencyAgainstEuro(sender: UIButton) {
+        CurrencyController.getCurrency("EUR") { (currencies) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.currencies = currencies
+                self.performSegueWithIdentifier("showCurrencies", sender: self)
+            })
+        }
+    }
     
     @IBAction func currencyRatesTapped(sender: UIButton) {
         
