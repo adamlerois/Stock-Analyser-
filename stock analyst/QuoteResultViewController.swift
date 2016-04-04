@@ -55,6 +55,7 @@ class QuoteResultViewController: UIViewController {
         } else {
             print("it's printing the error")
             
+            
         }
         
     }

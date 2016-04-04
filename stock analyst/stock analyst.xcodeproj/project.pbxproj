@@ -15,6 +15,7 @@
 		541B2B081CB1E4C900B1AC24 /* brickwall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B071CB1E4C900B1AC24 /* brickwall.jpg */; };
 		541B2B0A1CB1E95C00B1AC24 /* button (3).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B091CB1E95C00B1AC24 /* button (3).png */; };
 		541B2B0C1CB1E96300B1AC24 /* button (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B0B1CB1E96300B1AC24 /* button (2).png */; };
+		541B2B0E1CB2206600B1AC24 /* sehm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B0D1CB2206600B1AC24 /* sehm.jpg */; };
 		54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54220EB11CA0F1AF00989734 /* AppDelegate.swift */; };
 		54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB51CA0F1AF00989734 /* Main.storyboard */; };
 		54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB81CA0F1AF00989734 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		541B2B071CB1E4C900B1AC24 /* brickwall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = brickwall.jpg; path = ../../../../../brickwall.jpg; sourceTree = "<group>"; };
 		541B2B091CB1E95C00B1AC24 /* button (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (3).png"; path = "../../../../../../Downloads/button (3).png"; sourceTree = "<group>"; };
 		541B2B0B1CB1E96300B1AC24 /* button (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (2).png"; path = "../../../../../../Downloads/button (2).png"; sourceTree = "<group>"; };
+		541B2B0D1CB2206600B1AC24 /* sehm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sehm.jpg; path = ../../../../../sehm.jpg; sourceTree = "<group>"; };
 		54220EAE1CA0F1AF00989734 /* stock analyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stock analyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54220EB11CA0F1AF00989734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54220EB61CA0F1AF00989734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */,
 				541B2AFF1CAF136600B1AC24 /* button (1).png */,
 				544E95AC1CACE1B800DD7D0A /* currencyimage.jpg */,
+				541B2B0D1CB2206600B1AC24 /* sehm.jpg */,
 				544E95A21CAB79CE00DD7D0A /* button.png */,
 				544E95771CAA130300DD7D0A /* button (4).png */,
 				544E95791CAA131B00DD7D0A /* button (5).png */,
@@ -287,6 +290,7 @@
 				541B2B0C1CB1E96300B1AC24 /* button (2).png in Resources */,
 				544E95AD1CACE1B800DD7D0A /* currencyimage.jpg in Resources */,
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
+				541B2B0E1CB2206600B1AC24 /* sehm.jpg in Resources */,
 				544E95A31CAB79CE00DD7D0A /* button.png in Resources */,
 				541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */,
 				541B2B001CAF136600B1AC24 /* button (1).png in Resources */,

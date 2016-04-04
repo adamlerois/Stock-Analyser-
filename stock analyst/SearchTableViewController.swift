@@ -45,10 +45,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         super.viewDidLoad()
         tableView.backgroundView = UIImageView(image: UIImage(named: "brickwall.jpg"))
         tableView.reloadData()
-        
-    // searchBar.returnKeyType = UIReturnKeyType.Done
-        
-//        searchBar.delegate = self
+        self.searchBar.returnKeyType = UIReturnKeyType.Done
+        self.searchBar.delegate = self
         tableView.scrollEnabled = false
         
         
@@ -79,13 +77,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 self.tableView.reloadData()
             }
         }
-
+        
         
         
     }
     
     // functions
-   
+    
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
         updateViewMode()
     }
@@ -135,7 +133,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         }
             
         else {
-                if searchBar.text == ""   {
+            if searchBar.text == ""   {
                 symbolAlert()
                 
             }else {
@@ -148,7 +146,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                     })
                 })
             }
-          
+            
             self.searchBar.endEditing(true)
         }
     }
@@ -178,7 +176,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-     // filtering search bar
+    // filtering search bar
     
     // MARK: - Table view data source
     
