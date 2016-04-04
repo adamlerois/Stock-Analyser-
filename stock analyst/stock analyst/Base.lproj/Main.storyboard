@@ -19,7 +19,7 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockmarket_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Soz-Co-fgX">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brickwall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Soz-Co-fgX">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                     <color key="backgroundColor" red="0.13836354334823031" green="0.52746071804284989" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </imageView>
@@ -29,7 +29,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXs-PU-jpR">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="101"/>
                                             <color key="backgroundColor" red="0.99207454919815063" green="0.99573463201522827" blue="0.98398762941360474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="button (4).png" backgroundImage="stockmarket_bg.jpg">
+                                            <state key="normal" image="button (4).png" backgroundImage="brickwall.jpg">
                                                 <color key="titleColor" red="0.98234051465988159" green="0.1622353196144104" blue="0.045441530644893646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -43,8 +43,8 @@
                                                 <constraint firstAttribute="height" constant="33" id="uce-Q5-YU4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
+                                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.0" green="1" blue="0.069926756709999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="qp5-mA-dtS"/>
@@ -54,7 +54,7 @@
                                         </label>
                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-lW-aMk">
                                             <rect key="frame" x="0.0" y="201" width="600" height="101"/>
-                                            <color key="backgroundColor" red="0.29527848342835689" green="0.52151309300385096" blue="0.54596720950704225" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="tintColor" red="0.94900530576705933" green="0.15668663382530212" blue="0.13164719939231873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="234" id="gKC-LN-CCc"/>
@@ -77,7 +77,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="uEo-G3-l7H"/>
                                             </constraints>
-                                            <state key="normal" image="button (5).png" backgroundImage="stockmarket_bg.jpg">
+                                            <state key="normal" image="button (5).png" backgroundImage="brickwall.jpg">
                                                 <color key="titleColor" red="0.94900530576705933" green="0.15668663382530212" blue="0.13164719939231873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <variation key="default">
@@ -157,8 +157,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-ky-GLt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-ky-GLt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
@@ -191,7 +191,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockmarket_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brickwall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-c1-h90">
@@ -260,7 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockmarket_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Xg-u03">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brickwall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Xg-u03">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-0p-Vma">
@@ -399,63 +399,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currencyimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brickwall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YEf-L6-9U7">
-                                <rect key="frame" x="140" y="106" width="321" height="292"/>
+                                <rect key="frame" x="73" y="136" width="454" height="326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Rates Against USD. " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhB-Wg-3QE">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="73"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="321" id="wOy-gE-WCB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
-                                        <rect key="frame" x="73" y="73" width="176" height="73"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="73" id="6Yr-Eq-4xU"/>
-                                            <constraint firstAttribute="width" constant="176" id="yBg-F3-alS"/>
-                                        </constraints>
-                                        <state key="normal" title="Get Rates" image="button.png"/>
+                                        <rect key="frame" x="146" y="0.0" width="162" height="163"/>
+                                        <state key="normal" image="button (2).png"/>
                                         <connections>
                                             <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Rates Against EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-dG-P53">
-                                        <rect key="frame" x="19" y="146" width="284" height="73"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.069926756707679338" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-iO-1FQ">
-                                        <rect key="frame" x="66" y="219" width="190" height="73"/>
-                                        <state key="normal" image="button (1).png"/>
+                                        <rect key="frame" x="146" y="163" width="162" height="163"/>
+                                        <state key="normal" image="button (3).png"/>
                                         <connections>
                                             <action selector="CurrencyAgainstEuro:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="Q3A-uU-HtM"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="WSM-iO-1FQ" firstAttribute="leading" secondItem="fy4-tm-fu9" secondAttribute="leading" id="MdN-om-vwI"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YEf-L6-9U7" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="4xD-EQ-VCn"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leading" id="6uV-oa-9zJ"/>
-                            <constraint firstItem="YEf-L6-9U7" firstAttribute="centerX" secondItem="1rg-xE-MWC" secondAttribute="centerX" id="HQO-2F-WaI"/>
-                            <constraint firstItem="YEf-L6-9U7" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="42" id="VMJ-9P-0rP"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="bottom" secondItem="wjn-9t-kU2" secondAttribute="top" id="qTM-xJ-6k4"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" id="sZT-T3-Ltg"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leadingMargin" constant="53" id="0o1-Ii-uHe"/>
+                            <constraint firstAttribute="trailing" secondItem="1rg-xE-MWC" secondAttribute="trailing" id="6MP-i4-Hyp"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leading" id="9Mg-21-Kyx"/>
+                            <constraint firstItem="wjn-9t-kU2" firstAttribute="top" secondItem="YEf-L6-9U7" secondAttribute="bottom" constant="89" id="L6f-QN-AUd"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="72" id="Y2c-kA-R6a"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="centerX" secondItem="YEf-L6-9U7" secondAttribute="centerX" id="sIX-2N-FIN"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="bottom" secondItem="wjn-9t-kU2" secondAttribute="top" id="sMA-wY-JLd"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" id="vIG-a6-Vnw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V3i-5j-czE"/>
                     <connections>
                         <outlet property="CurrencyRates" destination="fy4-tm-fu9" id="aeQ-en-dJV"/>
-                        <outlet property="clickToGetRateLabel" destination="Gcb-dG-P53" id="6bP-Hx-9jk"/>
-                        <outlet property="titleLabel" destination="GhB-Wg-3QE" id="KCM-eM-OkV"/>
                         <segue destination="PtX-M7-qPx" kind="show" identifier="showCurrencies" id="hWo-By-Ea2"/>
                     </connections>
                 </viewController>
@@ -467,7 +451,7 @@
         <scene sceneID="xw8-hR-vhp">
             <objects>
                 <tableViewController id="PtX-M7-qPx" customClass="CurrencyTableViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -586,14 +570,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button (1).png" width="190" height="40"/>
+        <image name="brickwall.jpg" width="2048" height="1128"/>
+        <image name="button (2).png" width="162" height="40"/>
+        <image name="button (3).png" width="161" height="40"/>
         <image name="button (4).png" width="87" height="46"/>
         <image name="button (5).png" width="74" height="46"/>
-        <image name="button.png" width="190" height="40"/>
-        <image name="currencyimage.jpg" width="888" height="540"/>
         <image name="dollarSignTabbar.png" width="25" height="25"/>
         <image name="rsz_financial_report-512.png" width="25" height="25"/>
         <image name="rsz_stock_market-512.png" width="25" height="25"/>
-        <image name="stockmarket_bg.jpg" width="852" height="480"/>
     </resources>
 </document>

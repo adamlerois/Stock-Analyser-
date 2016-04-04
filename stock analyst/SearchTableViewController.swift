@@ -43,6 +43,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundView = UIImageView(image: UIImage(named: "brickwall.jpg"))
         tableView.reloadData()
         
     // searchBar.returnKeyType = UIReturnKeyType.Done
