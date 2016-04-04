@@ -29,7 +29,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXs-PU-jpR">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="101"/>
                                             <color key="backgroundColor" red="0.99207454919815063" green="0.99573463201522827" blue="0.98398762941360474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="button (4).png" backgroundImage="brickwall.jpg">
+                                            <state key="normal" image="button (5).png" backgroundImage="brickwall.jpg">
                                                 <color key="titleColor" red="0.98234051465988159" green="0.1622353196144104" blue="0.045441530644893646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -77,7 +77,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="uEo-G3-l7H"/>
                                             </constraints>
-                                            <state key="normal" image="button (5).png" backgroundImage="brickwall.jpg">
+                                            <state key="normal" image="button (4).png" backgroundImage="brickwall.jpg">
                                                 <color key="titleColor" red="0.94900530576705933" green="0.15668663382530212" blue="0.13164719939231873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <variation key="default">
@@ -399,42 +399,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brickwall.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallStreet2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YEf-L6-9U7">
                                 <rect key="frame" x="73" y="136" width="454" height="326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy4-tm-fu9">
-                                        <rect key="frame" x="146" y="0.0" width="162" height="163"/>
-                                        <state key="normal" image="button (2).png"/>
+                                        <rect key="frame" x="99" y="0.0" width="257" height="163"/>
+                                        <state key="normal" image="button (6).png"/>
                                         <connections>
                                             <action selector="currencyRatesTapped:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="a9i-XB-gec"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSM-iO-1FQ">
-                                        <rect key="frame" x="146" y="163" width="162" height="163"/>
-                                        <state key="normal" image="button (3).png"/>
+                                        <rect key="frame" x="99" y="163" width="256" height="163"/>
+                                        <state key="normal" image="button (7).png"/>
                                         <connections>
                                             <action selector="CurrencyAgainstEuro:" destination="fLH-uh-nuQ" eventType="touchUpInside" id="Q3A-uU-HtM"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="WSM-iO-1FQ" firstAttribute="leading" secondItem="fy4-tm-fu9" secondAttribute="leading" id="MdN-om-vwI"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YEf-L6-9U7" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leadingMargin" constant="53" id="0o1-Ii-uHe"/>
-                            <constraint firstAttribute="trailing" secondItem="1rg-xE-MWC" secondAttribute="trailing" id="6MP-i4-Hyp"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leading" id="9Mg-21-Kyx"/>
-                            <constraint firstItem="wjn-9t-kU2" firstAttribute="top" secondItem="YEf-L6-9U7" secondAttribute="bottom" constant="89" id="L6f-QN-AUd"/>
-                            <constraint firstItem="YEf-L6-9U7" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="72" id="Y2c-kA-R6a"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="centerX" secondItem="YEf-L6-9U7" secondAttribute="centerX" id="sIX-2N-FIN"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="bottom" secondItem="wjn-9t-kU2" secondAttribute="top" id="sMA-wY-JLd"/>
-                            <constraint firstItem="1rg-xE-MWC" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" id="vIG-a6-Vnw"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leadingMargin" constant="53" id="E9H-Xe-s93"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="centerX" secondItem="EiB-OO-5Xv" secondAttribute="centerX" id="EkS-47-y0A"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="bottom" secondItem="wjn-9t-kU2" secondAttribute="top" id="Hg1-ux-P2K"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="centerX" secondItem="1rg-xE-MWC" secondAttribute="centerX" id="LrU-x7-lH1"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" id="OcY-ji-GQt"/>
+                            <constraint firstItem="1rg-xE-MWC" firstAttribute="leading" secondItem="EiB-OO-5Xv" secondAttribute="leading" id="PFr-zY-iJT"/>
+                            <constraint firstItem="wjn-9t-kU2" firstAttribute="top" secondItem="YEf-L6-9U7" secondAttribute="bottom" constant="89" id="hKk-QI-ahP"/>
+                            <constraint firstItem="YEf-L6-9U7" firstAttribute="top" secondItem="eh9-ov-7mn" secondAttribute="bottom" constant="72" id="j5A-pA-56K"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V3i-5j-czE"/>
@@ -451,7 +448,7 @@
         <scene sceneID="xw8-hR-vhp">
             <objects>
                 <tableViewController id="PtX-M7-qPx" customClass="CurrencyTableViewController" customModule="stock_analyst" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2J0-aW-8U4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -523,7 +520,7 @@
                     <connections>
                         <segue destination="AjP-Xe-4nr" kind="relationship" relationship="viewControllers" id="HIc-cm-axT"/>
                         <segue destination="LXZ-g0-Ysc" kind="relationship" relationship="viewControllers" id="Myc-R1-Bz5"/>
-                        <segue destination="Wie-Nk-VRg" kind="relationship" relationship="viewControllers" id="ElH-vR-h4d"/>
+                        <segue destination="Wie-Nk-VRg" kind="relationship" relationship="viewControllers" id="0SI-aI-Dwm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6R5-Yr-i9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -552,6 +549,7 @@
         <!--Chart-->
         <scene sceneID="z0v-Mp-pMq">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-ki-XGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wie-Nk-VRg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chart" image="rsz_stock_market-512.png" id="yhP-7e-XCs"/>
                     <toolbarItems/>
@@ -564,19 +562,19 @@
                         <segue destination="vep-0t-Mme" kind="relationship" relationship="rootViewController" id="9Ih-30-arX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-ki-XGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1591" y="1391"/>
         </scene>
     </scenes>
     <resources>
         <image name="brickwall.jpg" width="2048" height="1128"/>
-        <image name="button (2).png" width="162" height="40"/>
-        <image name="button (3).png" width="161" height="40"/>
         <image name="button (4).png" width="87" height="46"/>
         <image name="button (5).png" width="74" height="46"/>
+        <image name="button (6).png" width="257" height="40"/>
+        <image name="button (7).png" width="256" height="40"/>
         <image name="dollarSignTabbar.png" width="25" height="25"/>
         <image name="rsz_financial_report-512.png" width="25" height="25"/>
         <image name="rsz_stock_market-512.png" width="25" height="25"/>
+        <image name="wallStreet2.jpg" width="490" height="360"/>
     </resources>
 </document>
