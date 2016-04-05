@@ -10,7 +10,6 @@ import UIKit
 
 class CurrencyTableViewController: UITableViewController {
     var currencyUnits: [Currency] = []
-    var imageName: String = "brickwall.jpg"
     
 
     override func viewDidLoad() {

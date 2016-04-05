@@ -13,8 +13,11 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         chartWebPage()
+        webView.canGoBack
+        webView.reload()
+        webView.goBack()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,9 +26,10 @@ class ChartViewController: UIViewController {
     }
     func chartWebPage() {
         let url = NSURL(string:"http://dzmobileappacademy.com/stocks-chart/")
-        var request = NSURLRequest(URL: url!)
+        let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
     }
+    
     
     
     /*
