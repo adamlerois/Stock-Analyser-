@@ -21,7 +21,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     //MARK: - properties
     let companies = ["Apple", "Alphabet Inc", "Microsoft", "Berkshire Hathaway", "Exxon Mobil", "Facebook", "Johnson & Johnson", "General Electric", "Amazon", "Wells Fargo", "AT&T", " Procter & Gamble", "JPMorgan Chase", "Verizon Communications", "Wal-Mart", "Coca-Cola", "Chevron", "Pfizer", "Visa", "Oracle", "Home Depot", "Disney", "Intel", "Philip Morris International", "PepsiCo", "Comcast", "Merck", "Cisco Systems", "Bank Of America", "IBM", "Citigroup", "Gilead Sciences", "Altria", "UnitedHealth Group", "McDonald's", "CVS Health", "Amgen", "NIKE Inc", "Medtronic", "Allergan", "Bristol-Myers Squibb", "Mastercard Inc", "3M", "Kraft Heinz Co", "United Parcel Service", "Schlumberger", "AbbVie Inc", "Walgreens Boots Alliance", "Boeing", "Starbucks Corp"]
-    let symbols = ["AAPL", "GOOG", "MSFT", "BRK-A", "XOM", "FB", "JNJ", "GE", "AMZN", "WFC", "T", "PG", "JPM", "VZ", "WMT", "KO", "CVX", "PFE", "V", "ORCL", "HD", "DIS", "INTC", "PM", "INTC", "PM", "PEP", "CMCSA", "MRK", "CSCO", "BAC", "IBM", "C", "GILD", "MO", "UNH", "MCD", "CVS", "AMGN", "NKE", "MDT", "AGN", "BMY", "MA", "MMM", "KHC", "UPS", "SLB", "ABBV", "WBA", "BA", "SBUX"]
+    let symbols = ["AAPL-Apple", "GOOG-Google", "MSFT-Microsoft", "BRK-A-Berkshire", "XOM-Exxon Mobil", "FB-Facebook", "JNJ-Johnson & Johnson", "GE-General Electric", "AMZN-Amazon", "WFC-Wells Fargo", "T-AT&T", "PG-Procter & Gamble", "JPM- Morgan Chase", "VZ-Verizon", "WMT-Wal-Mart", "KO-Coca-Cola", "CVX-Chevron", "PFE-pfizer", "V-Visa", "ORCL-Oracle", "HD-Home Depot", "DIS-Disney", "INTC-Intel", "PM-Philip Morris International", "PEP-PepsiCo", "CMCSA-Comcast", "MRK-Merck", "CSCO-Cisco Systems", "BAC-Bank of America", "IBM", "C-Citigroup", "GILD-Gilead Sciences", "MO-Altria", "UNH-UnitedHealth Group", "MCD-McDonald's", "CVS", "AMGN-Amgen", "NKE-Nike", "MDT-Medtronic", "AGN-Allergan", "BMY-Bristol-Myers Squibb", "MA-Mastercard Inc", "MMM-3M", "KHC-Kraft Heinz Co", "UPS", "SLB-Schlumberger", "ABBV-AbbVie Inc", "WBA-Walgreens Boots Alliance", "BA-Boeing", "SBUX-Starbucks Corp"]
     
     var lookup: StockLookup?
     var stockQuote: StockQuote?
@@ -43,44 +43,46 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.backgroundView = UIImageView(image: UIImage(named: "wallStreetNewYork.jpg"))
+        //        tableView.backgroundView = UIImageView(image: UIImage(named: "wallStreetNewYork.jpg"))
         tableView.reloadData()
         self.searchBar.returnKeyType = UIReturnKeyType.Done
-        self.searchBar.delegate = self
         tableView.scrollEnabled = false
         
-        
-        func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-            self.searchBar.showsCancelButton = true
-        }
-        
-        func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-            searchBar.showsCancelButton = false
-            searchBar.text = ""
-            searchBar.resignFirstResponder()
-        }
-        
-        
-        func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-            if searchBar.text == nil || searchBar.text == "" {
-                inSearchMode = false
-                
-            } else {
-                inSearchMode = true
-                if segmentedControl.selectedSegmentIndex == 0 {
-                    let string = searchBar.text!
-                    lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
-                } else {
-                    let symbolString = searchBar.text!
-                    QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
-                }
-                self.tableView.reloadData()
-            }
-        }
-        
-        
-        
     }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+    
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            
+        } else {
+            inSearchMode = true
+            if segmentedControl.selectedSegmentIndex == 0 {
+                let string = searchBar.text!
+                lookupFilteredArray = stockLookupArray.filter({$0.name.rangeOfString(string) != nil})
+            } else {
+                let symbolString = searchBar.text!
+                QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
+    
     
     // functions
     

@@ -8,16 +8,28 @@
 
 import UIKit
 
-class ChartViewController: UIViewController {
+class ChartViewController: UIViewController, UIWebViewDelegate {
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    func activityIndicator(){
+        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+        
+    }
     
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         chartWebPage()
-        webView.canGoBack
-        webView.reload()
-        webView.goBack()
         
+       
+        
+    }
+    func webViewDidFinishLoad(webView: UIWebView) {
+        indicator.stopAnimating()
+        indicator.hidesWhenStopped = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,6 +40,9 @@ class ChartViewController: UIViewController {
         let url = NSURL(string:"http://dzmobileappacademy.com/stocks-chart/")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
+        indicator.startAnimating()
+        indicator.backgroundColor = UIColor.whiteColor()
+    
     }
     
     

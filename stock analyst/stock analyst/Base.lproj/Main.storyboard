@@ -94,6 +94,9 @@
                                 <searchBar contentMode="redraw" text="" placeholder="Type Company Name... example: Apple" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-ft-hvM">
                                     <rect key="frame" x="8" y="8" width="584" height="44"/>
                                     <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="vMG-Ke-fIH" id="JTf-cf-6cD"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <color key="backgroundColor" red="0.37498613867253666" green="0.57336670885938845" blue="0.80490757042253525" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,20 +164,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-gL-0oB">
-                                <rect key="frame" x="290" y="266" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-gL-0oB">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3vV-ky-GLt" firstAttribute="top" secondItem="avj-35-vUy" secondAttribute="top" id="2f1-jm-Y15"/>
+                            <constraint firstItem="bIc-gL-0oB" firstAttribute="centerY" secondItem="avj-35-vUy" secondAttribute="centerY" id="3Ms-EC-7na"/>
                             <constraint firstItem="3vV-ky-GLt" firstAttribute="bottom" secondItem="GQe-M3-baJ" secondAttribute="top" id="4UP-Ji-nY3"/>
                             <constraint firstItem="3vV-ky-GLt" firstAttribute="leading" secondItem="avj-35-vUy" secondAttribute="leading" id="INb-3b-VCI"/>
                             <constraint firstAttribute="trailing" secondItem="3vV-ky-GLt" secondAttribute="trailing" id="h7f-t3-Ket"/>
+                            <constraint firstItem="bIc-gL-0oB" firstAttribute="centerX" secondItem="3vV-ky-GLt" secondAttribute="centerX" id="pPV-6c-la2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xyy-ei-jNo"/>
                     <connections>
+                        <outlet property="indicator" destination="bIc-gL-0oB" id="UTE-6D-8Xt"/>
                         <outlet property="webView" destination="3vV-ky-GLt" id="31M-Pl-cQY"/>
                     </connections>
                 </viewController>
@@ -533,7 +539,6 @@
         <!--Currency-->
         <scene sceneID="7vE-xa-x9E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oo-M9-n6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LXZ-g0-Ysc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Currency" image="dollarSignTabbar.png" id="Xyl-tg-bK7"/>
                     <toolbarItems/>
@@ -546,13 +551,13 @@
                         <segue destination="fLH-uh-nuQ" kind="relationship" relationship="rootViewController" id="dyy-9u-XmQ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Oo-M9-n6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837" y="-190"/>
         </scene>
         <!--Chart-->
         <scene sceneID="z0v-Mp-pMq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-ki-XGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wie-Nk-VRg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Chart" image="rsz_stock_market-512.png" id="yhP-7e-XCs"/>
                     <toolbarItems/>
@@ -565,6 +570,7 @@
                         <segue destination="vep-0t-Mme" kind="relationship" relationship="rootViewController" id="9Ih-30-arX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcg-ki-XGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1591" y="1391"/>
         </scene>
