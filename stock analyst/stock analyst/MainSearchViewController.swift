@@ -1,4 +1,13 @@
 //
+//  MainSearchViewController.swift
+//  stock analyst
+//
+//  Created by youcef bouhafna on 4/5/16.
+//  Copyright © 2016 Youcef. All rights reserved.
+//
+
+
+//
 //  SearchTableViewController.swift
 //  stock analyst
 //
@@ -8,7 +17,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIBarPositioningDelegate, UITextFieldDelegate {
+class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UIBarPositioningDelegate, UITextFieldDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     enum SegmentedControlViewMode: Int {
         case Lookup = 0
@@ -21,7 +30,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     //MARK: - properties
     let companies = ["Apple", "Alphabet Inc", "Microsoft", "Berkshire Hathaway", "Exxon Mobil", "Facebook", "Johnson & Johnson", "General Electric", "Amazon", "Wells Fargo", "AT&T", " Procter & Gamble", "JPMorgan Chase", "Verizon Communications", "Wal-Mart", "Coca-Cola", "Chevron", "Pfizer", "Visa", "Oracle", "Home Depot", "Disney", "Intel", "Philip Morris International", "PepsiCo", "Comcast", "Merck", "Cisco Systems", "Bank Of America", "IBM", "Citigroup", "Gilead Sciences", "Altria", "UnitedHealth Group", "McDonald's", "CVS Health", "Amgen", "NIKE Inc", "Medtronic", "Allergan", "Bristol-Myers Squibb", "Mastercard Inc", "3M", "Kraft Heinz Co", "United Parcel Service", "Schlumberger", "AbbVie Inc", "Walgreens Boots Alliance", "Boeing", "Starbucks Corp"]
-    let symbols = ["AAPL-Apple", "GOOG-Google", "MSFT-Microsoft", "BRK-A-Berkshire", "XOM-Exxon Mobil", "FB-Facebook", "JNJ-Johnson & Johnson", "GE-General Electric", "AMZN-Amazon", "WFC-Wells Fargo", "T-AT&T", "PG-Procter & Gamble", "JPM- Morgan Chase", "VZ-Verizon", "WMT-Wal-Mart", "KO-Coca-Cola", "CVX-Chevron", "PFE-pfizer", "V-Visa", "ORCL-Oracle", "HD-Home Depot", "DIS-Disney", "INTC-Intel", "PM-Philip Morris International", "PEP-PepsiCo", "CMCSA-Comcast", "MRK-Merck", "CSCO-Cisco Systems", "BAC-Bank of America", "IBM", "C-Citigroup", "GILD-Gilead Sciences", "MO-Altria", "UNH-UnitedHealth Group", "MCD-McDonald's", "CVS", "AMGN-Amgen", "NKE-Nike", "MDT-Medtronic", "AGN-Allergan", "BMY-Bristol-Myers Squibb", "MA-Mastercard Inc", "MMM-3M", "KHC-Kraft Heinz Co", "UPS", "SLB-Schlumberger", "ABBV-AbbVie Inc", "WBA-Walgreens Boots Alliance", "BA-Boeing", "SBUX-Starbucks Corp"]
+     let symbols = ["AAPL", "GOOG", "MSFT", "BRK-A", "XOM", "FB", "JNJ", "GE", "AMZN", "WFC", "T", "PG", "JPM", "VZ", "WMT", "KO", "CVX", "PFE", "V", "ORCL", "HD", "DIS", "INTC", "PM", "INTC", "PM", "PEP", "CMCSA", "MRK", "CSCO", "BAC", "IBM", "C", "GILD", "MO", "UNH", "MCD", "CVS", "AMGN", "NKE", "MDT", "AGN", "BMY", "MA", "MMM", "KHC", "UPS", "SLB", "ABBV", "WBA", "BA", "SBUX"]
     
     var lookup: StockLookup?
     var stockQuote: StockQuote?
@@ -44,9 +53,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         //        tableView.backgroundView = UIImageView(image: UIImage(named: "wallStreetNewYork.jpg"))
-        tableView.reloadData()
+        //        tableView.reloadData()
         self.searchBar.returnKeyType = UIReturnKeyType.Done
-        tableView.scrollEnabled = false
+        //        tableView.scrollEnabled = false
         
     }
     
@@ -78,7 +87,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                 let symbolString = searchBar.text!
                 QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
             }
-            self.tableView.reloadData()
+            //            self.tableView.reloadData()
         }
     }
     
@@ -128,7 +137,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                     self.lookup = result
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                        self.tableView.reloadData()
+                        //                        self.tableView.reloadData()
                     })
                 })
             }
@@ -144,7 +153,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
                     self.stockQuote = result
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                        self.tableView.reloadData()
+                        //                        self.tableView.reloadData()
                     })
                 })
             }
@@ -180,18 +189,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
     
     // filtering search bar
     
-    // MARK: - Table view data source
-    
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    
     //MARK: - UIPickerView Protocol Methods
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -213,50 +210,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
         }
     }
     
-    /*
-     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-     if editingStyle == .Delete {
-     // Delete the row from the data source
-     tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-     } else if editingStyle == .Insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
     
     
     // MARK: - Navigation
@@ -271,6 +226,4 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIP
             resultView?.companyLookup = self.lookup
         }
     }
-    
-    
 }

@@ -17,6 +17,7 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         indicator.center = self.view.center
         self.view.addSubview(indicator)
         
+        
     }
     
     @IBOutlet weak var webView: UIWebView!
@@ -41,7 +42,7 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
         indicator.startAnimating()
-        indicator.backgroundColor = UIColor.whiteColor()
+        indicator.backgroundColor = UIColor.init(white: 0.5, alpha: 0.0)
     
     }
     

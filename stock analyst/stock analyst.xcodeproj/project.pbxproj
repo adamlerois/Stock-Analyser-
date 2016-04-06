@@ -19,7 +19,6 @@
 		54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB51CA0F1AF00989734 /* Main.storyboard */; };
 		54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB81CA0F1AF00989734 /* Assets.xcassets */; };
 		54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EBA1CA0F1AF00989734 /* LaunchScreen.storyboard */; };
-		544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */; };
 		544E95291CA5DEF900DD7D0A /* LookupResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E95281CA5DEF900DD7D0A /* LookupResultViewController.swift */; };
 		544E952B1CA5DF0900DD7D0A /* QuoteResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E952A1CA5DF0900DD7D0A /* QuoteResultViewController.swift */; };
 		544E95781CAA130300DD7D0A /* button (4).png in Resources */ = {isa = PBXBuildFile; fileRef = 544E95771CAA130300DD7D0A /* button (4).png */; };
@@ -35,6 +34,7 @@
 		547FABD91CA1D745009DBB2D /* StockLookupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABD81CA1D745009DBB2D /* StockLookupController.swift */; };
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
 		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
+		54AC05941CB44468009E4E01 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC05931CB44468009E4E01 /* MainSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,6 @@
 		54220EB81CA0F1AF00989734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54220EBB1CA0F1AF00989734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54220EBD1CA0F1AF00989734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = ../SearchTableViewController.swift; sourceTree = "<group>"; };
 		544E95281CA5DEF900DD7D0A /* LookupResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LookupResultViewController.swift; path = ../LookupResultViewController.swift; sourceTree = "<group>"; };
 		544E952A1CA5DF0900DD7D0A /* QuoteResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteResultViewController.swift; path = ../QuoteResultViewController.swift; sourceTree = "<group>"; };
 		544E95771CAA130300DD7D0A /* button (4).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (4).png"; path = "../../../../../../Downloads/button (4).png"; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		547FABD81CA1D745009DBB2D /* StockLookupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockLookupController.swift; sourceTree = "<group>"; };
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
 		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
+		54AC05931CB44468009E4E01 /* MainSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				544E952A1CA5DF0900DD7D0A /* QuoteResultViewController.swift */,
-				544E951E1CA4502800DD7D0A /* SearchTableViewController.swift */,
+				54AC05931CB44468009E4E01 /* MainSearchViewController.swift */,
 				544E95281CA5DEF900DD7D0A /* LookupResultViewController.swift */,
 			);
 			name = Views;
@@ -314,8 +314,8 @@
 				544E95931CAB0DA900DD7D0A /* Currency.swift in Sources */,
 				547FABD51CA1D710009DBB2D /* StockQuote.swift in Sources */,
 				544E959D1CAB77A500DD7D0A /* CurrencyTableViewController.swift in Sources */,
-				544E951F1CA4502800DD7D0A /* SearchTableViewController.swift in Sources */,
 				544E952B1CA5DF0900DD7D0A /* QuoteResultViewController.swift in Sources */,
+				54AC05941CB44468009E4E01 /* MainSearchViewController.swift in Sources */,
 				544E95A11CAB788200DD7D0A /* CurrencyHomeViewController.swift in Sources */,
 				547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */,
 			);

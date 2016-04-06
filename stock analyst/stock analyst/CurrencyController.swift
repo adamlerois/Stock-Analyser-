@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 class CurrencyController {
+    
     static let baseURLString = "http://api.fixer.io/latest?base="
     static func getCurrency(base: String, completion:(currencies: [Currency])-> Void) {
         let searchString = baseURLString + "\(base)"
