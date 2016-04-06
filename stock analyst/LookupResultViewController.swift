@@ -13,15 +13,22 @@ class LookupResultViewController: UIViewController {
     @IBOutlet weak var SymbolLookupLabel: UILabel!
     @IBOutlet weak var exchangeLookupLabel: UILabel!
     
-    
     var companyLookup: StockLookup?
+    var companyName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateData()
-        
-        
+        if let companyName = companyName {
+            StockLookupController.stockLookupSearchByName(companyName, completion: { (result) in
+                self.companyLookup = result
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.updateData()
+                })
+            })
+        }
     }
+
     
     // stock functions
     func updateData() {

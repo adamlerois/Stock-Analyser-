@@ -11,6 +11,7 @@ import UIKit
 class QuoteResultViewController: UIViewController {
     
     var stockQuote: StockQuote?
+    var companyName: String?
     
     @IBOutlet weak var openLabel: UILabel!
     @IBOutlet weak var lowLabel: UILabel!
@@ -30,8 +31,14 @@ class QuoteResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabels()
-        
+        if let companyName = companyName {
+            StockQuoteController.stockQuoteSearchBySymbol(companyName) { (stocks) in
+                self.stockQuote = stocks
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.updateLabels()
+                })
+            }
+        }
     }
     
     // stock functions
@@ -66,8 +73,8 @@ class QuoteResultViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-
-   
+    
+    
     
     
     override func didReceiveMemoryWarning() {

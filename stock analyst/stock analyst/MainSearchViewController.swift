@@ -30,10 +30,11 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
     
     //MARK: - properties
     let companies = ["Apple", "Alphabet Inc", "Microsoft", "Berkshire Hathaway", "Exxon Mobil", "Facebook", "Johnson & Johnson", "General Electric", "Amazon", "Wells Fargo", "AT&T", " Procter & Gamble", "JPMorgan Chase", "Verizon Communications", "Wal-Mart", "Coca-Cola", "Chevron", "Pfizer", "Visa", "Oracle", "Home Depot", "Disney", "Intel", "Philip Morris International", "PepsiCo", "Comcast", "Merck", "Cisco Systems", "Bank Of America", "IBM", "Citigroup", "Gilead Sciences", "Altria", "UnitedHealth Group", "McDonald's", "CVS Health", "Amgen", "NIKE Inc", "Medtronic", "Allergan", "Bristol-Myers Squibb", "Mastercard Inc", "3M", "Kraft Heinz Co", "United Parcel Service", "Schlumberger", "AbbVie Inc", "Walgreens Boots Alliance", "Boeing", "Starbucks Corp"]
-     let symbols = ["AAPL", "GOOG", "MSFT", "BRK-A", "XOM", "FB", "JNJ", "GE", "AMZN", "WFC", "T", "PG", "JPM", "VZ", "WMT", "KO", "CVX", "PFE", "V", "ORCL", "HD", "DIS", "INTC", "PM", "INTC", "PM", "PEP", "CMCSA", "MRK", "CSCO", "BAC", "IBM", "C", "GILD", "MO", "UNH", "MCD", "CVS", "AMGN", "NKE", "MDT", "AGN", "BMY", "MA", "MMM", "KHC", "UPS", "SLB", "ABBV", "WBA", "BA", "SBUX"]
+    let symbols = ["AAPL", "GOOG", "MSFT", "BRK-A", "XOM", "FB", "JNJ", "GE", "AMZN", "WFC", "T", "PG", "JPM", "VZ", "WMT", "KO", "CVX", "PFE", "V", "ORCL", "HD", "DIS", "INTC", "PM", "INTC", "PM", "PEP", "CMCSA", "MRK", "CSCO", "BAC", "IBM", "C", "GILD", "MO", "UNH", "MCD", "CVS", "AMGN", "NKE", "MDT", "AGN", "BMY", "MA", "MMM", "KHC", "UPS", "SLB", "ABBV", "WBA", "BA", "SBUX"]
     
     var lookup: StockLookup?
     var stockQuote: StockQuote?
+    var companyName: String?
     var inSearchMode = false
     var stockLookupArray : [StockLookup] = []
     var stockQuoteArray: [StockQuote] = []
@@ -52,10 +53,8 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        tableView.backgroundView = UIImageView(image: UIImage(named: "wallStreetNewYork.jpg"))
-        //        tableView.reloadData()
+        
         self.searchBar.returnKeyType = UIReturnKeyType.Done
-        //        tableView.scrollEnabled = false
         
     }
     
@@ -87,7 +86,6 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
                 let symbolString = searchBar.text!
                 QuoteFilteredArray = stockQuoteArray.filter({$0.symbol.rangeOfString(symbolString) != nil})
             }
-            //            self.tableView.reloadData()
         }
     }
     
@@ -105,22 +103,24 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
         if segmentedControl.selectedSegmentIndex == 1 {
             let index = self.pickerView.selectedRowInComponent(0)
             let symbolesString = self.symbols[index]
-            StockQuoteController.stockQuoteSearchBySymbol(symbolesString) { (stocks) in
-                self.stockQuote = stocks
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                })
-            }
+            companyName = symbolesString
+            //            StockQuoteController.stockQuoteSearchBySymbol(symbolesString) { (stocks) in
+            //                self.stockQuote = stocks
+            //                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.performSegueWithIdentifier("toQuoteResult", sender: self)
+            //                })
+            //            }
         } else {
             let index = self.pickerView.selectedRowInComponent(0)
             let companiesString = self.companies[index]
-            StockLookupController.stockLookupSearchByName(companiesString, completion: { (result) in
-                self.lookup = result
-                
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                })
-            })
+            companyName = companiesString
+            //            StockLookupController.stockLookupSearchByName(companiesString, completion: { (result) in
+            //                self.lookup = result
+            //
+            //                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.performSegueWithIdentifier("toResultIdentifier", sender: self)
+            //                })
+            //            })
         }
     }
     
@@ -137,7 +137,6 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
                     self.lookup = result
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                        //                        self.tableView.reloadData()
                     })
                 })
             }
@@ -153,7 +152,6 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
                     self.stockQuote = result
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                        //                        self.tableView.reloadData()
                     })
                 })
             }
@@ -187,7 +185,6 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-    // filtering search bar
     
     //MARK: - UIPickerView Protocol Methods
     
@@ -206,7 +203,7 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
         if segmentedControl.selectedSegmentIndex == 0 {
             return self.companies[row]
         } else  {
-            return self.symbols[row]
+            return "\(symbols[row]) - \(companies[row])"
         }
     }
     
@@ -220,10 +217,12 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toQuoteResult" {
             let resultView = segue.destinationViewController as? QuoteResultViewController
-            resultView?.stockQuote = self.stockQuote
+            //            resultView?.stockQuote = self.stockQuote
+            resultView?.companyName = companyName
         } else if segue.identifier == "toResultIdentifier" {
             let resultView = segue.destinationViewController as? LookupResultViewController
-            resultView?.companyLookup = self.lookup
+            //            resultView?.companyLookup = self.lookup
+            resultView?.companyName = companyName
         }
     }
 }

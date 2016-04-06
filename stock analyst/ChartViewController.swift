@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ChartViewController: UIViewController, UIWebViewDelegate {
     
@@ -16,17 +17,20 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         indicator.center = self.view.center
         self.view.addSubview(indicator)
-        
-        
+      
     }
     
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         chartWebPage()
-        
        
-        
+    }
+    @IBAction func reloadButtonTapped(sender: UIBarButtonItem) {
+        self.webView.reload()
+    }
+    @IBAction func backButtonTapped(sender: AnyObject) {
+        self.webView.goBack()
     }
     func webViewDidFinishLoad(webView: UIWebView) {
         indicator.stopAnimating()
@@ -41,6 +45,7 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         let url = NSURL(string:"http://dzmobileappacademy.com/stocks-chart/")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
+        webView.goBack()
         indicator.startAnimating()
         indicator.backgroundColor = UIColor.init(white: 0.5, alpha: 0.0)
     

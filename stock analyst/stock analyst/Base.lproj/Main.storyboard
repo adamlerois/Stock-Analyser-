@@ -36,6 +36,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="1Av-tI-ctj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="Find"/>
                                         <connections>
                                             <action selector="findButtonTapped:" destination="qCH-GA-jbh" eventType="touchUpInside" id="pnr-At-1k4"/>
@@ -66,6 +67,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Y3h-PH-R03"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="Go"/>
                                         <connections>
                                             <action selector="goButtonTapped" destination="qCH-GA-jbh" eventType="touchUpInside" id="iR2-2C-WEn"/>
@@ -121,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-ky-GLt">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3vV-ky-GLt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
@@ -139,7 +141,18 @@
                             <constraint firstAttribute="trailing" secondItem="3vV-ky-GLt" secondAttribute="trailing" id="h7f-t3-Ket"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xyy-ei-jNo"/>
+                    <navigationItem key="navigationItem" id="Xyy-ei-jNo">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="uWk-tL-0e2">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="vep-0t-Mme" id="y39-2P-E5g"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="ZXN-Li-pK3">
+                            <connections>
+                                <action selector="reloadButtonTapped:" destination="vep-0t-Mme" id="dG3-KW-4uN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="indicator" destination="bIc-gL-0oB" id="UTE-6D-8Xt"/>
                         <outlet property="webView" destination="3vV-ky-GLt" id="31M-Pl-cQY"/>
