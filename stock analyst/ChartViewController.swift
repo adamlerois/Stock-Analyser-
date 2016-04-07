@@ -17,14 +17,17 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         indicator.center = self.view.center
         self.view.addSubview(indicator)
-      
     }
     
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         chartWebPage()
-       
+        
+    }
+    override func viewDidAppear(animated: Bool) {
+        indicator.stopAnimating()
+        indicator.hidesWhenStopped = true
     }
     @IBAction func reloadButtonTapped(sender: UIBarButtonItem) {
         self.webView.reload()
@@ -32,11 +35,6 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
     @IBAction func backButtonTapped(sender: AnyObject) {
         self.webView.goBack()
     }
-    func webViewDidFinishLoad(webView: UIWebView) {
-        indicator.stopAnimating()
-        indicator.hidesWhenStopped = true
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,7 +46,6 @@ class ChartViewController: UIViewController, UIWebViewDelegate {
         webView.goBack()
         indicator.startAnimating()
         indicator.backgroundColor = UIColor.init(white: 0.5, alpha: 0.0)
-    
     }
     
     

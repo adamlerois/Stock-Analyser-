@@ -35,6 +35,8 @@
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
 		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
 		54AC05941CB44468009E4E01 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC05931CB44468009E4E01 /* MainSearchViewController.swift */; };
+		54AC05961CB5CC91009E4E01 /* moneybag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AC05951CB5CC91009E4E01 /* moneybag.jpg */; };
+		54AC05981CB603B7009E4E01 /* bestimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AC05971CB603B7009E4E01 /* bestimage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
 		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
 		54AC05931CB44468009E4E01 /* MainSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
+		54AC05951CB5CC91009E4E01 /* moneybag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = moneybag.jpg; path = ../../../../../moneybag.jpg; sourceTree = "<group>"; };
+		54AC05971CB603B7009E4E01 /* bestimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bestimage.jpg; path = ../../../../../bestimage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 		544E95391CA7496C00DD7D0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				54AC05971CB603B7009E4E01 /* bestimage.jpg */,
+				54AC05951CB5CC91009E4E01 /* moneybag.jpg */,
 				541B2B1D1CB30A1A00B1AC24 /* header-background.jpg */,
 				541B2B151CB2D77500B1AC24 /* button (6).png */,
 				541B2B131CB2D76E00B1AC24 /* button (7).png */,
@@ -283,10 +289,12 @@
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
 				541B2B0E1CB2206600B1AC24 /* sehm.jpg in Resources */,
 				541B2B161CB2D77500B1AC24 /* button (6).png in Resources */,
+				54AC05981CB603B7009E4E01 /* bestimage.jpg in Resources */,
 				541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */,
 				541B2B021CB0A5B100B1AC24 /* dollarSignTabbar.png in Resources */,
 				541B2B1E1CB30A1A00B1AC24 /* header-background.jpg in Resources */,
 				541B2B041CB0A5C900B1AC24 /* rsz_financial_report-512.png in Resources */,
+				54AC05961CB5CC91009E4E01 /* moneybag.jpg in Resources */,
 				541B2B141CB2D76E00B1AC24 /* button (7).png in Resources */,
 				544E95781CAA130300DD7D0A /* button (4).png in Resources */,
 				54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */,
