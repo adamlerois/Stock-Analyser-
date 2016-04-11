@@ -11,10 +11,8 @@
 		541B2B021CB0A5B100B1AC24 /* dollarSignTabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */; };
 		541B2B041CB0A5C900B1AC24 /* rsz_financial_report-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */; };
 		541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */; };
-		541B2B0E1CB2206600B1AC24 /* sehm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B0D1CB2206600B1AC24 /* sehm.jpg */; };
 		541B2B141CB2D76E00B1AC24 /* button (7).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B131CB2D76E00B1AC24 /* button (7).png */; };
 		541B2B161CB2D77500B1AC24 /* button (6).png in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B151CB2D77500B1AC24 /* button (6).png */; };
-		541B2B1E1CB30A1A00B1AC24 /* header-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 541B2B1D1CB30A1A00B1AC24 /* header-background.jpg */; };
 		54220EB21CA0F1AF00989734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54220EB11CA0F1AF00989734 /* AppDelegate.swift */; };
 		54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB51CA0F1AF00989734 /* Main.storyboard */; };
 		54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54220EB81CA0F1AF00989734 /* Assets.xcassets */; };
@@ -35,8 +33,8 @@
 		547FABDB1CA1D758009DBB2D /* StockQuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */; };
 		547FABDF1CA252D3009DBB2D /* QuoteNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */; };
 		54AC05941CB44468009E4E01 /* MainSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AC05931CB44468009E4E01 /* MainSearchViewController.swift */; };
-		54AC05961CB5CC91009E4E01 /* moneybag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AC05951CB5CC91009E4E01 /* moneybag.jpg */; };
-		54AC05981CB603B7009E4E01 /* bestimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AC05971CB603B7009E4E01 /* bestimage.jpg */; };
+		54AC059A1CBB58C8009E4E01 /* gry backgound.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AC05991CBB58C8009E4E01 /* gry backgound.png */; };
+		54AC059C1CBB5958009E4E01 /* dollar sign circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 54AC059B1CBB5958009E4E01 /* dollar sign circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +42,8 @@
 		541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dollarSignTabbar.png; path = ../../../../../../Downloads/dollarSignTabbar.png; sourceTree = "<group>"; };
 		541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_financial_report-512.png"; path = "../../../../../../Downloads/rsz_financial_report-512.png"; sourceTree = "<group>"; };
 		541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rsz_stock_market-512.png"; path = "../../../../../../Downloads/rsz_stock_market-512.png"; sourceTree = "<group>"; };
-		541B2B0D1CB2206600B1AC24 /* sehm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sehm.jpg; path = ../../../../../sehm.jpg; sourceTree = "<group>"; };
 		541B2B131CB2D76E00B1AC24 /* button (7).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (7).png"; path = "../../../../../../Downloads/button (7).png"; sourceTree = "<group>"; };
 		541B2B151CB2D77500B1AC24 /* button (6).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button (6).png"; path = "../../../../../../Downloads/button (6).png"; sourceTree = "<group>"; };
-		541B2B1D1CB30A1A00B1AC24 /* header-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "header-background.jpg"; path = "../../../../../header-background.jpg"; sourceTree = "<group>"; };
 		54220EAE1CA0F1AF00989734 /* stock analyst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stock analyst.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54220EB11CA0F1AF00989734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54220EB61CA0F1AF00989734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,8 +66,8 @@
 		547FABDA1CA1D758009DBB2D /* StockQuoteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockQuoteController.swift; sourceTree = "<group>"; };
 		547FABDE1CA252D3009DBB2D /* QuoteNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteNetworkController.swift; sourceTree = "<group>"; };
 		54AC05931CB44468009E4E01 /* MainSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchViewController.swift; sourceTree = "<group>"; };
-		54AC05951CB5CC91009E4E01 /* moneybag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = moneybag.jpg; path = ../../../../../moneybag.jpg; sourceTree = "<group>"; };
-		54AC05971CB603B7009E4E01 /* bestimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bestimage.jpg; path = ../../../../../bestimage.jpg; sourceTree = "<group>"; };
+		54AC05991CBB58C8009E4E01 /* gry backgound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gry backgound.png"; path = "../../../../../gry backgound.png"; sourceTree = "<group>"; };
+		54AC059B1CBB5958009E4E01 /* dollar sign circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "dollar sign circle.png"; path = "../../../../../dollar sign circle.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,15 +124,13 @@
 		544E95391CA7496C00DD7D0A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				54AC05971CB603B7009E4E01 /* bestimage.jpg */,
-				54AC05951CB5CC91009E4E01 /* moneybag.jpg */,
-				541B2B1D1CB30A1A00B1AC24 /* header-background.jpg */,
+				54AC059B1CBB5958009E4E01 /* dollar sign circle.png */,
+				54AC05991CBB58C8009E4E01 /* gry backgound.png */,
 				541B2B151CB2D77500B1AC24 /* button (6).png */,
 				541B2B131CB2D76E00B1AC24 /* button (7).png */,
 				541B2B051CB0A5D200B1AC24 /* rsz_stock_market-512.png */,
 				541B2B031CB0A5C900B1AC24 /* rsz_financial_report-512.png */,
 				541B2B011CB0A5B100B1AC24 /* dollarSignTabbar.png */,
-				541B2B0D1CB2206600B1AC24 /* sehm.jpg */,
 				544E95771CAA130300DD7D0A /* button (4).png */,
 				544E95791CAA131B00DD7D0A /* button (5).png */,
 			);
@@ -287,18 +281,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				54220EBC1CA0F1AF00989734 /* LaunchScreen.storyboard in Resources */,
-				541B2B0E1CB2206600B1AC24 /* sehm.jpg in Resources */,
 				541B2B161CB2D77500B1AC24 /* button (6).png in Resources */,
-				54AC05981CB603B7009E4E01 /* bestimage.jpg in Resources */,
 				541B2B061CB0A5D200B1AC24 /* rsz_stock_market-512.png in Resources */,
 				541B2B021CB0A5B100B1AC24 /* dollarSignTabbar.png in Resources */,
-				541B2B1E1CB30A1A00B1AC24 /* header-background.jpg in Resources */,
 				541B2B041CB0A5C900B1AC24 /* rsz_financial_report-512.png in Resources */,
-				54AC05961CB5CC91009E4E01 /* moneybag.jpg in Resources */,
 				541B2B141CB2D76E00B1AC24 /* button (7).png in Resources */,
 				544E95781CAA130300DD7D0A /* button (4).png in Resources */,
+				54AC059A1CBB58C8009E4E01 /* gry backgound.png in Resources */,
 				54220EB91CA0F1AF00989734 /* Assets.xcassets in Resources */,
 				544E957A1CAA131B00DD7D0A /* button (5).png in Resources */,
+				54AC059C1CBB5958009E4E01 /* dollar sign circle.png in Resources */,
 				54220EB71CA0F1AF00989734 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

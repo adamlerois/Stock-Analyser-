@@ -135,12 +135,13 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
                 nameAlert()
             }else {
                 let searchText = searchBar.text
-                StockLookupController.stockLookupSearchByName(searchText!, completion: { (result) in
-                    self.lookup = result
-                    dispatch_async(dispatch_get_main_queue(), {
+                companyName = searchText
+//                StockLookupController.stockLookupSearchByName(searchText!, completion: { (result) in
+//                    self.lookup = result
+//                    dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toResultIdentifier", sender: self)
-                    })
-                })
+//                    })
+//                })
             }
         }
             
@@ -150,12 +151,13 @@ class MainSearchViewController: UIViewController, UISearchBarDelegate, UIPickerV
                 
             }else {
                 let searchText = searchBar.text
-                StockQuoteController.stockQuoteSearchBySymbol(searchText!, completion: { (result) in
-                    self.stockQuote = result
-                    dispatch_async(dispatch_get_main_queue(), {
+                companyName = searchText
+//                StockQuoteController.stockQuoteSearchBySymbol(searchText!, completion: { (result) in
+//                    self.stockQuote = result
+//                    dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("toQuoteResult", sender: self)
-                    })
-                })
+//                    })
+//                })
             }
             
             self.searchBar.endEditing(true)

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sehm.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-Es-Ioz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar sign circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-Es-Ioz">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="GdA-cB-5mq"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sehm.jpg" width="280" height="187"/>
+        <image name="dollar sign circle.png" width="626" height="626"/>
     </resources>
 </document>

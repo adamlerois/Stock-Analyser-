@@ -18,24 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-Bj-Cew">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gry backgound.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ztn-Bj-Cew">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aFY-qM-cWI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aFY-qM-cWI">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7VG-6u-pYY">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="qCH-GA-jbh" id="gVZ-bK-qkK"/>
                                         </connections>
                                     </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoc-fQ-GT0">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="65" id="VxZ-Zp-Tck"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="81" width="600" height="81"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="Find">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,33 +42,24 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0z5-po-eRg">
-                                        <rect key="frame" x="0.0" y="65" width="600" height="33"/>
+                                        <rect key="frame" x="0.0" y="162" width="600" height="82"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR Pick Up A Company" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-bW-8Pb">
-                                        <rect key="frame" x="0.0" y="98" width="600" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="x14-y7-5h4"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="244" width="600" height="81"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.27101846680000002" blue="0.16443090290000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt3-5u-3FW">
-                                        <rect key="frame" x="0.0" y="133" width="600" height="254"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="254" id="mXU-PT-GXa"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="325" width="600" height="81"/>
                                         <connections>
                                             <outlet property="dataSource" destination="qCH-GA-jbh" id="MB1-2S-zLz"/>
                                             <outlet property="delegate" destination="qCH-GA-jbh" id="TE6-VZ-28G"/>
                                         </connections>
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nit-f4-azK">
-                                        <rect key="frame" x="0.0" y="387" width="600" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="1fh-pl-yRU"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="406" width="600" height="81"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="Go">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,21 +69,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="uoc-fQ-GT0" firstAttribute="top" secondItem="7VG-6u-pYY" secondAttribute="top" id="opu-OK-vHb"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aFY-qM-cWI" firstAttribute="top" secondItem="TkO-2I-z3N" secondAttribute="bottom" id="39L-cJ-Gtd"/>
-                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="bottom" secondItem="Ela-gU-3oY" secondAttribute="top" id="Bs6-w2-xcc"/>
-                            <constraint firstItem="aFY-qM-cWI" firstAttribute="bottom" secondItem="Ela-gU-3oY" secondAttribute="top" id="GEZ-BP-dcb"/>
-                            <constraint firstItem="aFY-qM-cWI" firstAttribute="trailing" secondItem="Ztn-Bj-Cew" secondAttribute="trailing" id="YRY-Wo-M0s"/>
-                            <constraint firstItem="aFY-qM-cWI" firstAttribute="leading" secondItem="NaW-XC-0XH" secondAttribute="leading" id="agJ-n2-CXP"/>
-                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="top" secondItem="aFY-qM-cWI" secondAttribute="top" id="jXM-SV-miJ"/>
-                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="leading" secondItem="aFY-qM-cWI" secondAttribute="leading" id="pIf-3P-eGb"/>
-                            <constraint firstAttribute="trailing" secondItem="Ztn-Bj-Cew" secondAttribute="trailing" id="pwB-Ys-MZV"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="bottom" secondItem="Ela-gU-3oY" secondAttribute="top" id="1Si-cv-cZL"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="leading" secondItem="aFY-qM-cWI" secondAttribute="leading" id="2Wc-FV-iAS"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="leading" secondItem="NaW-XC-0XH" secondAttribute="leading" id="858-h4-hfV"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="top" secondItem="aFY-qM-cWI" secondAttribute="top" id="8B5-bH-jbc"/>
+                            <constraint firstAttribute="trailing" secondItem="aFY-qM-cWI" secondAttribute="trailing" id="Td2-GI-liP"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="top" secondItem="TkO-2I-z3N" secondAttribute="bottom" id="rVQ-MK-diG"/>
+                            <constraint firstItem="aFY-qM-cWI" firstAttribute="bottom" secondItem="Ela-gU-3oY" secondAttribute="top" id="vHD-xb-pji"/>
+                            <constraint firstItem="Ztn-Bj-Cew" firstAttribute="trailing" secondItem="aFY-qM-cWI" secondAttribute="trailing" id="xpX-Wo-lsW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7VQ-eO-HJ1">
@@ -188,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gry backgound.png" translatesAutoresizingMaskIntoConstraints="NO" id="MTe-dw-Cpz">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2xB-c1-h90">
@@ -257,7 +242,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Xg-u03">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gry backgound.png" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Xg-u03">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-0p-Vma">
@@ -396,7 +381,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gry backgound.png" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-xE-MWC">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-WZ-dDc">
@@ -572,7 +557,7 @@
     </scenes>
     <resources>
         <image name="dollarSignTabbar.png" width="25" height="25"/>
-        <image name="header-background.jpg" width="1024" height="550"/>
+        <image name="gry backgound.png" width="960" height="616"/>
         <image name="rsz_financial_report-512.png" width="25" height="25"/>
         <image name="rsz_stock_market-512.png" width="25" height="25"/>
     </resources>
