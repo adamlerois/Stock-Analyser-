@@ -10,7 +10,7 @@ import UIKit
 
 class CurrencyHomeViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
     var currencies: [Currency] = []
-    var currencyArray = ["AUD", "BGN", "BRL", "CAD", "CHF", "CNY", "CZK", "DKK", "GBP", "HKD", "HRK", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN","RON","RUB","SEK","SGD","THB","TRY","ZAR","EUR"]
+    var currencyArray = ["AUD", "BGN", "BRL", "CAD", "CHF", "CNY", "CZK", "DKK", "GBP", "HKD", "HRK", "HUF", "IDR", "ILS", "INR", "JPY", "KRW", "MXN", "MYR", "NOK", "NZD", "PHP", "PLN","RON","RUB","SEK","SGD","THB","TRY","ZAR","EUR", "USD"]
     
     @IBOutlet weak var indicatingLabel: UILabel!
     @IBOutlet weak var currencyPickerView: UIPickerView!
